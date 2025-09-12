@@ -4,3 +4,5 @@ D:\12A\P01\P01\bin\Debug\P01.pdb
 D:\12A\P01\P01\obj\Debug\P01.csprojResolveAssemblyReference.cache
 D:\12A\P01\P01\obj\Debug\P01.exe
 D:\12A\P01\P01\obj\Debug\P01.pdb
+d:\C-Start\P01\P01\obj\Debug\P01.exe
+d:\C-Start\P01\P01\obj\Debug\P01.pdb
