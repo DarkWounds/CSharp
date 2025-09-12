@@ -40,7 +40,6 @@ namespace p05_jagged
                     Console.Write(a[i][j] + " ");
                 Console.WriteLine();
             }
-            Console.WriteLine();
 
             //Afisare 2;
             foreach (int[] v in a)
