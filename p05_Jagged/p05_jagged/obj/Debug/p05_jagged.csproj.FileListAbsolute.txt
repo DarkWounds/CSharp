@@ -1,0 +1,5 @@
+D:\12A\p05_jagged\p05_jagged\bin\Debug\p05_jagged.exe.config
+D:\12A\p05_jagged\p05_jagged\bin\Debug\p05_jagged.exe
+D:\12A\p05_jagged\p05_jagged\bin\Debug\p05_jagged.pdb
+D:\12A\p05_jagged\p05_jagged\obj\Debug\p05_jagged.exe
+D:\12A\p05_jagged\p05_jagged\obj\Debug\p05_jagged.pdb
