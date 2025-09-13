@@ -1,0 +1,16 @@
+D:\C-Start\p05_Jagged\p05_jagged\bin\Debug\net8.0\p05_jagged.exe
+D:\C-Start\p05_Jagged\p05_jagged\bin\Debug\net8.0\p05_jagged.dll.config
+D:\C-Start\p05_Jagged\p05_jagged\bin\Debug\net8.0\p05_jagged.deps.json
+D:\C-Start\p05_Jagged\p05_jagged\bin\Debug\net8.0\p05_jagged.runtimeconfig.json
+D:\C-Start\p05_Jagged\p05_jagged\bin\Debug\net8.0\p05_jagged.dll
+D:\C-Start\p05_Jagged\p05_jagged\bin\Debug\net8.0\p05_jagged.pdb
+D:\C-Start\p05_Jagged\p05_jagged\obj\Debug\net8.0\p05_jagged.GeneratedMSBuildEditorConfig.editorconfig
+D:\C-Start\p05_Jagged\p05_jagged\obj\Debug\net8.0\p05_jagged.AssemblyInfoInputs.cache
+D:\C-Start\p05_Jagged\p05_jagged\obj\Debug\net8.0\p05_jagged.AssemblyInfo.cs
+D:\C-Start\p05_Jagged\p05_jagged\obj\Debug\net8.0\p05_jagged.csproj.CoreCompileInputs.cache
+D:\C-Start\p05_Jagged\p05_jagged\obj\Debug\net8.0\p05_jagged.sourcelink.json
+D:\C-Start\p05_Jagged\p05_jagged\obj\Debug\net8.0\p05_jagged.dll
+D:\C-Start\p05_Jagged\p05_jagged\obj\Debug\net8.0\refint\p05_jagged.dll
+D:\C-Start\p05_Jagged\p05_jagged\obj\Debug\net8.0\p05_jagged.pdb
+D:\C-Start\p05_Jagged\p05_jagged\obj\Debug\net8.0\p05_jagged.genruntimeconfig.cache
+D:\C-Start\p05_Jagged\p05_jagged\obj\Debug\net8.0\ref\p05_jagged.dll

@@ -3,3 +3,11 @@ D:\12A\p05_jagged\p05_jagged\bin\Debug\p05_jagged.exe
 D:\12A\p05_jagged\p05_jagged\bin\Debug\p05_jagged.pdb
 D:\12A\p05_jagged\p05_jagged\obj\Debug\p05_jagged.exe
 D:\12A\p05_jagged\p05_jagged\obj\Debug\p05_jagged.pdb
+d:\C-Start\p05_Jagged\p05_jagged\bin\Debug\p05_jagged.exe.config
+d:\C-Start\p05_Jagged\p05_jagged\bin\Debug\p05_jagged.exe
+d:\C-Start\p05_Jagged\p05_jagged\bin\Debug\p05_jagged.pdb
+d:\C-Start\p05_Jagged\p05_jagged\obj\Debug\p05_jagged.csproj.AssemblyReference.cache
+d:\C-Start\p05_Jagged\p05_jagged\obj\Debug\p05_jagged.exe.config
+d:\C-Start\p05_Jagged\p05_jagged\obj\Debug\p05_jagged.csproj.CoreCompileInputs.cache
+d:\C-Start\p05_Jagged\p05_jagged\obj\Debug\p05_jagged.exe
+d:\C-Start\p05_Jagged\p05_jagged\obj\Debug\p05_jagged.pdb

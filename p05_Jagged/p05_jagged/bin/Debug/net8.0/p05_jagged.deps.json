@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "p05_jagged/1.0.0": {
+        "runtime": {
+          "p05_jagged.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "p05_jagged/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36429.23 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculatorSper", "CalculatorSper\CalculatorSper.csproj", "{DD91D965-A354-4C60-9475-5F198E991864}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DD91D965-A354-4C60-9475-5F198E991864}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD91D965-A354-4C60-9475-5F198E991864}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD91D965-A354-4C60-9475-5F198E991864}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD91D965-A354-4C60-9475-5F198E991864}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E649AAC3-5A58-4B00-991E-84F91F4F5194}
+	EndGlobalSection
+EndGlobal
