@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CalculatorSper")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+edb54e7c4abe35a8f1bcfd1a84b9520849da3741")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+672a8a1a28234ad0c028e6de7bef88f9a5ab62bd")]
 [assembly: System.Reflection.AssemblyProductAttribute("CalculatorSper")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CalculatorSper")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
