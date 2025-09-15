@@ -240,6 +240,8 @@
             Calc.TabIndex = 20;
             Calc.Text = "0";
             Calc.TextChanged += Calc_TextChanged;
+            Calc.KeyDown += Calc_KeyDown;
+            Calc.KeyPress += Calc_KeyPress;
             // 
             // StergeTot
             // 
@@ -266,7 +268,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(276, 362);
+            ClientSize = new Size(277, 366);
             Controls.Add(Btn1);
             Controls.Add(StergeTot);
             Controls.Add(Calc);
