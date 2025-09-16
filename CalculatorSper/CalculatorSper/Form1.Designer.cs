@@ -45,7 +45,6 @@
             Inmultire = new Button();
             Impartire = new Button();
             Procent = new Button();
-            Paranteze = new Button();
             Calc = new RichTextBox();
             StergeTot = new Button();
             Btn1 = new Button();
@@ -222,16 +221,6 @@
             Procent.UseVisualStyleBackColor = true;
             Procent.Click += Procent_Click;
             // 
-            // Paranteze
-            // 
-            Paranteze.Location = new Point(78, 72);
-            Paranteze.Name = "Paranteze";
-            Paranteze.Size = new Size(57, 51);
-            Paranteze.TabIndex = 17;
-            Paranteze.Text = "()";
-            Paranteze.UseVisualStyleBackColor = true;
-            Paranteze.Click += Paranteze_Click;
-            // 
             // Calc
             // 
             Calc.Location = new Point(15, 12);
@@ -248,7 +237,7 @@
             StergeTot.BackColor = SystemColors.ActiveCaption;
             StergeTot.Location = new Point(15, 72);
             StergeTot.Name = "StergeTot";
-            StergeTot.Size = new Size(57, 51);
+            StergeTot.Size = new Size(120, 51);
             StergeTot.TabIndex = 21;
             StergeTot.Text = "AC";
             StergeTot.UseVisualStyleBackColor = false;
@@ -274,7 +263,6 @@
             Controls.Add(Calc);
             Controls.Add(Impartire);
             Controls.Add(Procent);
-            Controls.Add(Paranteze);
             Controls.Add(Inmultire);
             Controls.Add(Scadere);
             Controls.Add(Adunare);
@@ -314,7 +302,6 @@
         private Button Inmultire;
         private Button Impartire;
         private Button Procent;
-        private Button Paranteze;
         private RichTextBox Calc;
         private Button StergeTot;
         private Button Btn1;

@@ -123,23 +123,6 @@ namespace CalculatorSper
             else Calc.Text += "7";
         }
 
-        private void Paranteze_Click(object sender, EventArgs e)
-        {
-            string exp = Calc.Text;
-            char last = exp[exp.Length - 1];
-            if (last == '%' || last == '+' || last == '-' || last == '*' || last == '/')
-            {
-                Calc.Text += "(";
-                ParaD++;
-            }
-            else if(ParaD > ParaI)
-            {
-                Calc.Text += ")";
-                ParaI++;
-            }
-                
-        }
-
         private void Punct_Click(object sender, EventArgs e)
         {
             string exp = Calc.Text;
@@ -233,9 +216,13 @@ namespace CalculatorSper
 
         private void Calc_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyValue < 48 || e.KeyValue > 57 || e.KeyValue != 189
-               || e.KeyValue != 187 || e.KeyValue != 56 || e.KeyValue != 53)
-                e.SuppressKeyPress = true;
+           // if (e.KeyValue < 48 || e.KeyValue > 57 && e.KeyValue != 189
+              // && e.KeyValue != 187 && e.KeyValue != 56 && e.KeyValue != 53)
+             e.SuppressKeyPress = true;
+           // else if (Calc.Text == "0" || Calc.Text == "Invalid" && e.KeyValue != 189
+              // && e.KeyValue != 187 && e.KeyValue != 56 && e.KeyValue != 53)
+               // Calc.Text = "";
+
         }
 
         private void Calc_KeyPress(object sender, KeyPressEventArgs e)
