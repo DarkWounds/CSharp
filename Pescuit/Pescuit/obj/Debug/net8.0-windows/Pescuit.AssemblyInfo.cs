@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Pescuit")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+25fbb7b3e97f7984688dbcae9d013389b1681568")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3d29ee936202306b1ee5e59179711062be40fab6")]
 [assembly: System.Reflection.AssemblyProductAttribute("Pescuit")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Pescuit")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
