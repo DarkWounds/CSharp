@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("CalculatorSper")]
-[assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("Pescuit")]
+[assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0dc46b5f96d55e2b8df7de9419bf8a2e24ad9e2d")]
-[assembly: System.Reflection.AssemblyProductAttribute("CalculatorSper")]
-[assembly: System.Reflection.AssemblyTitleAttribute("CalculatorSper")]
+[assembly: System.Reflection.AssemblyProductAttribute("Pescuit")]
+[assembly: System.Reflection.AssemblyTitleAttribute("Pescuit")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 [assembly: System.Runtime.Versioning.TargetPlatformAttribute("Windows7.0")]
 [assembly: System.Runtime.Versioning.SupportedOSPlatformAttribute("Windows7.0")]

@@ -1,0 +1,17 @@
+D:\C-Start\Pescuit\Pescuit\bin\Debug\net8.0-windows\Pescuit.exe
+D:\C-Start\Pescuit\Pescuit\bin\Debug\net8.0-windows\Pescuit.deps.json
+D:\C-Start\Pescuit\Pescuit\bin\Debug\net8.0-windows\Pescuit.runtimeconfig.json
+D:\C-Start\Pescuit\Pescuit\bin\Debug\net8.0-windows\Pescuit.dll
+D:\C-Start\Pescuit\Pescuit\bin\Debug\net8.0-windows\Pescuit.pdb
+D:\C-Start\Pescuit\Pescuit\obj\Debug\net8.0-windows\Pescuit.Form1.resources
+D:\C-Start\Pescuit\Pescuit\obj\Debug\net8.0-windows\Pescuit.csproj.GenerateResource.cache
+D:\C-Start\Pescuit\Pescuit\obj\Debug\net8.0-windows\Pescuit.GeneratedMSBuildEditorConfig.editorconfig
+D:\C-Start\Pescuit\Pescuit\obj\Debug\net8.0-windows\Pescuit.AssemblyInfoInputs.cache
+D:\C-Start\Pescuit\Pescuit\obj\Debug\net8.0-windows\Pescuit.AssemblyInfo.cs
+D:\C-Start\Pescuit\Pescuit\obj\Debug\net8.0-windows\Pescuit.csproj.CoreCompileInputs.cache
+D:\C-Start\Pescuit\Pescuit\obj\Debug\net8.0-windows\Pescuit.sourcelink.json
+D:\C-Start\Pescuit\Pescuit\obj\Debug\net8.0-windows\Pescuit.dll
+D:\C-Start\Pescuit\Pescuit\obj\Debug\net8.0-windows\refint\Pescuit.dll
+D:\C-Start\Pescuit\Pescuit\obj\Debug\net8.0-windows\Pescuit.pdb
+D:\C-Start\Pescuit\Pescuit\obj\Debug\net8.0-windows\Pescuit.genruntimeconfig.cache
+D:\C-Start\Pescuit\Pescuit\obj\Debug\net8.0-windows\ref\Pescuit.dll
