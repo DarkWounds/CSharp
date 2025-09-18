@@ -1,0 +1,15 @@
+D:\C-Start\p07_String\p07_String\bin\Debug\net8.0\p07_String.exe
+D:\C-Start\p07_String\p07_String\bin\Debug\net8.0\p07_String.deps.json
+D:\C-Start\p07_String\p07_String\bin\Debug\net8.0\p07_String.runtimeconfig.json
+D:\C-Start\p07_String\p07_String\bin\Debug\net8.0\p07_String.dll
+D:\C-Start\p07_String\p07_String\bin\Debug\net8.0\p07_String.pdb
+D:\C-Start\p07_String\p07_String\obj\Debug\net8.0\p07_String.GeneratedMSBuildEditorConfig.editorconfig
+D:\C-Start\p07_String\p07_String\obj\Debug\net8.0\p07_String.AssemblyInfoInputs.cache
+D:\C-Start\p07_String\p07_String\obj\Debug\net8.0\p07_String.AssemblyInfo.cs
+D:\C-Start\p07_String\p07_String\obj\Debug\net8.0\p07_String.csproj.CoreCompileInputs.cache
+D:\C-Start\p07_String\p07_String\obj\Debug\net8.0\p07_String.sourcelink.json
+D:\C-Start\p07_String\p07_String\obj\Debug\net8.0\p07_String.dll
+D:\C-Start\p07_String\p07_String\obj\Debug\net8.0\refint\p07_String.dll
+D:\C-Start\p07_String\p07_String\obj\Debug\net8.0\p07_String.pdb
+D:\C-Start\p07_String\p07_String\obj\Debug\net8.0\p07_String.genruntimeconfig.cache
+D:\C-Start\p07_String\p07_String\obj\Debug\net8.0\ref\p07_String.dll

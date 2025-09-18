@@ -65,10 +65,9 @@ namespace Pescuit
 
             }
         }
-        public Form1()
+
+        private void Initializare()
         {
-            //Init
-            InitializeComponent();
             Done1.Visible = false;
             Done2.Visible = false;
             Done3.Visible = false;
@@ -97,6 +96,26 @@ namespace Pescuit
             Vizibilitate(Plus2, Minus2, RTB2, CLB2, false);
             Vizibilitate(Plus3, Minus3, RTB3, CLB3, false);
             Vizibilitate(Plus4, Minus4, RTB4, CLB4, false);
+        }
+        public Form1()
+        {
+            //Init
+            InitializeComponent();
+            Initializare();
+            Form1_Load(this, null);
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Add1.BringToFront();
+            Add2.BringToFront();
+            Add3.BringToFront();
+            Add4.BringToFront();
+            Done1.BringToFront();
+            Done2.BringToFront();
+            Done3.BringToFront();
+            Done4.BringToFront();
         }
         private void Min_TextChanged(object sender, EventArgs e)
         {
@@ -257,7 +276,7 @@ namespace Pescuit
 
         private void Minus4_Click(object sender, EventArgs e)
         {
-            if(CLB4.SelectedIndex != null)
+            if (CLB4.SelectedIndex != null)
                 CLB4.Items.RemoveAt(CLB4.SelectedIndex);
         }
 
@@ -296,7 +315,7 @@ namespace Pescuit
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void CheckedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void CLB1_SelectedIndexChanged(object sender, EventArgs e)
         {
             AdaugareInLista(LB1, CLB1);
         }
@@ -440,7 +459,28 @@ namespace Pescuit
 
         private void Add1_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
     }
 }
