@@ -141,6 +141,7 @@ namespace Pescuit
             // panel1
             // 
             panel1.AllowDrop = true;
+            panel1.BackColor = Color.Thistle;
             panel1.Controls.Add(Done1);
             panel1.Controls.Add(Add1);
             panel1.Controls.Add(CLB1);
@@ -153,9 +154,12 @@ namespace Pescuit
             panel1.Controls.Add(LB1);
             panel1.Location = new Point(114, 49);
             panel1.Name = "panel1";
-            panel1.Size = new Size(152, 376);
+            panel1.Size = new Size(152, 393);
             panel1.TabIndex = 49;
+            panel1.DragDrop += Panel1_DragDrop;
+            panel1.DragEnter += Panel1_DragEnter;
             panel1.Paint += panel1_Paint;
+            panel1.MouseDown += Panel1_MouseDown;
             // 
             // Done1
             // 
@@ -277,6 +281,7 @@ namespace Pescuit
             // panel2
             // 
             panel2.AllowDrop = true;
+            panel2.BackColor = Color.Thistle;
             panel2.Controls.Add(Done2);
             panel2.Controls.Add(Add2);
             panel2.Controls.Add(Minus2);
@@ -289,9 +294,12 @@ namespace Pescuit
             panel2.Controls.Add(LB2);
             panel2.Location = new Point(276, 49);
             panel2.Name = "panel2";
-            panel2.Size = new Size(158, 376);
+            panel2.Size = new Size(158, 393);
             panel2.TabIndex = 50;
+            panel2.DragDrop += Panel2_DragDrop;
+            panel2.DragEnter += Panel2_DragEnter;
             panel2.Paint += panel2_Paint;
+            panel2.MouseDown += Panel2_MouseDown;
             // 
             // Done2
             // 
@@ -413,6 +421,7 @@ namespace Pescuit
             // panel3
             // 
             panel3.AllowDrop = true;
+            panel3.BackColor = Color.Thistle;
             panel3.Controls.Add(Done3);
             panel3.Controls.Add(Add3);
             panel3.Controls.Add(Minus3);
@@ -425,9 +434,12 @@ namespace Pescuit
             panel3.Controls.Add(LB3);
             panel3.Location = new Point(440, 49);
             panel3.Name = "panel3";
-            panel3.Size = new Size(163, 376);
+            panel3.Size = new Size(163, 393);
             panel3.TabIndex = 51;
+            panel3.DragDrop += Panel3_DragDrop;
+            panel3.DragEnter += Panel3_DragEnter;
             panel3.Paint += panel3_Paint;
+            panel3.MouseDown += Panel3_MouseDown;
             // 
             // Done3
             // 
@@ -549,6 +561,7 @@ namespace Pescuit
             // panel4
             // 
             panel4.AllowDrop = true;
+            panel4.BackColor = Color.Thistle;
             panel4.Controls.Add(Done4);
             panel4.Controls.Add(Add4);
             panel4.Controls.Add(Minus4);
@@ -561,9 +574,12 @@ namespace Pescuit
             panel4.Controls.Add(LB4);
             panel4.Location = new Point(609, 49);
             panel4.Name = "panel4";
-            panel4.Size = new Size(163, 376);
+            panel4.Size = new Size(163, 393);
             panel4.TabIndex = 52;
+            panel4.DragDrop += Panel4_DragDrop;
+            panel4.DragEnter += Panel4_DragEnter;
             panel4.Paint += panel4_Paint;
+            panel4.MouseDown += Panel4_MouseDown;
             // 
             // Done4
             // 

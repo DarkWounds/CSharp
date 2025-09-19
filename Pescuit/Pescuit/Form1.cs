@@ -96,6 +96,73 @@ namespace Pescuit
             Vizibilitate(Plus2, Minus2, RTB2, CLB2, false);
             Vizibilitate(Plus3, Minus3, RTB3, CLB3, false);
             Vizibilitate(Plus4, Minus4, RTB4, CLB4, false);
+
+
+            panel1.Controls.Add(LB1);
+            panel1.Controls.Add(Btn1);
+            panel1.Controls.Add(Setari1);
+            panel1.Controls.Add(Minute1);
+            panel1.Controls.Add(CLB1);
+            panel1.Controls.Add(RTB1);
+            panel1.Controls.Add(Plus1);
+            panel1.Controls.Add(Minus1);
+            panel1.Controls.Add(Add1);
+            panel1.Controls.Add(Done1);
+            panel2.Controls.Add(LB2);
+            panel2.Controls.Add(Btn2);
+            panel2.Controls.Add(Setari2);
+            panel2.Controls.Add(Minute2);
+            panel2.Controls.Add(CLB2);
+            panel2.Controls.Add(RTB2);
+            panel2.Controls.Add(Plus2);
+            panel2.Controls.Add(Minus2);
+            panel2.Controls.Add(Add2);
+            panel2.Controls.Add(Done2);
+            panel3.Controls.Add(LB3);
+            panel3.Controls.Add(Btn3);
+            panel3.Controls.Add(Setari3);
+            panel3.Controls.Add(Minute3);
+            panel3.Controls.Add(CLB3);
+            panel3.Controls.Add(RTB3);
+            panel3.Controls.Add(Plus3);
+            panel3.Controls.Add(Minus3);
+            panel3.Controls.Add(Add3);
+            panel3.Controls.Add(Done3);
+            panel4.Controls.Add(LB4);
+            panel4.Controls.Add(Btn4);
+            panel4.Controls.Add(Setari4);
+            panel4.Controls.Add(Minute4);
+            panel4.Controls.Add(CLB4);
+            panel4.Controls.Add(RTB4);
+            panel4.Controls.Add(Plus4);
+            panel4.Controls.Add(Minus4);
+            panel4.Controls.Add(Add4);
+            panel4.Controls.Add(Done4);
+
+            LB1.SendToBack();
+            Minute1.SendToBack();
+            Btn1.SendToBack();
+            Add1.BringToFront();
+            Done1.BringToFront();
+
+            LB2.SendToBack();
+            Minute2.SendToBack();
+            Btn2.SendToBack();
+            Add2.BringToFront();
+            Done2.BringToFront();
+
+            LB3.SendToBack();
+            Minute3.SendToBack();
+            Btn3.SendToBack();
+            Add3.BringToFront();
+            Done3.BringToFront();
+
+            LB4.SendToBack();
+            Minute4.SendToBack();
+            Btn4.SendToBack();
+            Add4.BringToFront();
+            Done4.BringToFront();
+
         }
         public Form1()
         {
@@ -108,14 +175,7 @@ namespace Pescuit
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Add1.BringToFront();
-            Add2.BringToFront();
-            Add3.BringToFront();
-            Add4.BringToFront();
-            Done1.BringToFront();
-            Done2.BringToFront();
-            Done3.BringToFront();
-            Done4.BringToFront();
+            
         }
         private void Min_TextChanged(object sender, EventArgs e)
         {
@@ -482,5 +542,69 @@ namespace Pescuit
 
         }
 
+        /// <summary>
+        /// Panel Move
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Panel1_DragDrop(object sender, DragEventArgs e)
+        {
+
+        }
+
+        private void Panel1_DragEnter(object sender, DragEventArgs e)
+        {
+
+        }
+
+        private void Panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void Panel2_DragDrop(object sender, DragEventArgs e)
+        {
+
+        }
+
+        private void Panel2_DragEnter(object sender, DragEventArgs e)
+        {
+
+        }
+
+        private void Panel2_MouseDown(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void Panel3_DragDrop(object sender, DragEventArgs e)
+        {
+
+        }
+
+        private void Panel3_DragEnter(object sender, DragEventArgs e)
+        {
+
+        }
+
+        private void Panel3_MouseDown(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void Panel4_DragDrop(object sender, DragEventArgs e)
+        {
+
+        }
+
+        private void Panel4_DragEnter(object sender, DragEventArgs e)
+        {
+
+        }
+
+        private void Panel4_MouseDown(object sender, MouseEventArgs e)
+        {
+
+        }
     }
 }
