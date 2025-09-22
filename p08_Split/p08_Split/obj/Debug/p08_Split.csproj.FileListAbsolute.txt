@@ -1,0 +1,5 @@
+D:\12A\p08_Split\p08_Split\bin\Debug\p08_Split.exe.config
+D:\12A\p08_Split\p08_Split\bin\Debug\p08_Split.exe
+D:\12A\p08_Split\p08_Split\bin\Debug\p08_Split.pdb
+D:\12A\p08_Split\p08_Split\obj\Debug\p08_Split.exe
+D:\12A\p08_Split\p08_Split\obj\Debug\p08_Split.pdb
