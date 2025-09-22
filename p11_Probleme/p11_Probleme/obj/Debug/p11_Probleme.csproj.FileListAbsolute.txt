@@ -1,0 +1,5 @@
+D:\12A\p11_Probleme\p11_Probleme\bin\Debug\p11_Probleme.exe.config
+D:\12A\p11_Probleme\p11_Probleme\bin\Debug\p11_Probleme.exe
+D:\12A\p11_Probleme\p11_Probleme\bin\Debug\p11_Probleme.pdb
+D:\12A\p11_Probleme\p11_Probleme\obj\Debug\p11_Probleme.exe
+D:\12A\p11_Probleme\p11_Probleme\obj\Debug\p11_Probleme.pdb

@@ -1,0 +1,6 @@
+D:\12A\p10_fisiere_text\p10_fisiere_text\bin\Debug\p10_fisiere_text.exe.config
+D:\12A\p10_fisiere_text\p10_fisiere_text\bin\Debug\p10_fisiere_text.exe
+D:\12A\p10_fisiere_text\p10_fisiere_text\bin\Debug\p10_fisiere_text.pdb
+D:\12A\p10_fisiere_text\p10_fisiere_text\obj\Debug\p10_fisiere_text.csprojResolveAssemblyReference.cache
+D:\12A\p10_fisiere_text\p10_fisiere_text\obj\Debug\p10_fisiere_text.exe
+D:\12A\p10_fisiere_text\p10_fisiere_text\obj\Debug\p10_fisiere_text.pdb
