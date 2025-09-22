@@ -1,0 +1,6 @@
+D:\12A\p09_fisire_text\p09_fisire_text\bin\Debug\p09_fisire_text.exe.config
+D:\12A\p09_fisire_text\p09_fisire_text\bin\Debug\p09_fisire_text.exe
+D:\12A\p09_fisire_text\p09_fisire_text\bin\Debug\p09_fisire_text.pdb
+D:\12A\p09_fisire_text\p09_fisire_text\obj\Debug\p09_fisire_text.csprojResolveAssemblyReference.cache
+D:\12A\p09_fisire_text\p09_fisire_text\obj\Debug\p09_fisire_text.exe
+D:\12A\p09_fisire_text\p09_fisire_text\obj\Debug\p09_fisire_text.pdb
