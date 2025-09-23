@@ -81,10 +81,14 @@ namespace p11_Probleme
             while ((linie = fin3.ReadLine()) != null)
             {
                 string[] cuv = linie.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
-                //a[++lenght] = int.Parse(cuv[0]);
-                //Alta metoda de conversie
-                a[lenght++] = Convert.ToInt16(cuv[0]);
-
+                foreach (string e in cuv)
+                {
+                    int x = int.Parse(e);
+                    //Alta metoda de conversie
+                    //int x = Convert.ToInt32(e);
+                    if (x != 0)
+                        a[lenght++] = x;
+                }
             }
 
             Array.Sort(a, 0, lenght);
