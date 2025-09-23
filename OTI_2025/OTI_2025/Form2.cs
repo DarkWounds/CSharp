@@ -16,6 +16,7 @@ namespace OTI_2025
         public Form2()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
             limg.View = View.LargeIcon;
             limg.LargeImageList = imageList1;
             limg.Items.Add("", 2);
@@ -24,18 +25,26 @@ namespace OTI_2025
 
         private void BtnSet_Click(object sender, EventArgs e)
         {
-            int value = int.Parse(tbExploratori.Text);
-            if (value < 30 || value > 200)
+            try
             {
-                MessageBox.Show("Numarul de exploratori trebuie sa fie intre 30 si 200!");
-                tbExploratori.Text = "";
-                return;
+                int value = int.Parse(tbExploratori.Text);
+                if (value < 30 || value > 200)
+                {
+                    MessageBox.Show("Numarul de exploratori trebuie sa fie intre 30 si 200!");
+                    tbExploratori.Text = "";
+                    return;
+                }
+                else
+                {
+                    Expeditie form3 = new();
+                    form3.Show();
+                    this.Close();
+                }
             }
-            else
+            catch (FormatException)
             {
-                Expeditie form3 = new();
-                form3.Show();
-                this.Close();
+                MessageBox.Show("Nu ati introdus un nr!");
+                tbExploratori.Text = "";
             }
         }
 

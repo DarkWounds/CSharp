@@ -15,6 +15,7 @@ namespace OTI_2025
         public Expeditie()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void Form3_Load(object sender, EventArgs e)

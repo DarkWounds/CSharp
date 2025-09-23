@@ -105,6 +105,7 @@
             Controls.Add(Btn1);
             Name = "Form1";
             Text = "Autentificare";
+            Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
         }

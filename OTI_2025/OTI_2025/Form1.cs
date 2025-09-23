@@ -9,6 +9,7 @@ namespace OTI_2025
         public Form1()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
             textBox1.ReadOnly = true;
             textBox2.ReadOnly = true;
         }
@@ -45,6 +46,11 @@ namespace OTI_2025
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
         {
 
         }
