@@ -16,3 +16,5 @@ D:\C-Start\OTI_2025\OTI_2025\obj\Debug\net8.0-windows\refint\OTI_2025.dll
 D:\C-Start\OTI_2025\OTI_2025\obj\Debug\net8.0-windows\OTI_2025.pdb
 D:\C-Start\OTI_2025\OTI_2025\obj\Debug\net8.0-windows\OTI_2025.genruntimeconfig.cache
 D:\C-Start\OTI_2025\OTI_2025\obj\Debug\net8.0-windows\ref\OTI_2025.dll
+D:\C-Start\OTI_2025\OTI_2025\obj\Debug\net8.0-windows\OTI_2025.Form2.resources
+D:\C-Start\OTI_2025\OTI_2025\obj\Debug\net8.0-windows\OTI_2025.Expeditie.resources

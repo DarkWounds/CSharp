@@ -121,4 +121,11 @@
   <data name="barca" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\barca.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="barca1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\barca1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Harta900x600" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Harta900x600.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Harta</comment>
+  </data>
 </root>

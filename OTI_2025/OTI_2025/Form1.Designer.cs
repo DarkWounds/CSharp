@@ -28,69 +28,76 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Btn1 = new Button();
             textBox1 = new TextBox();
             textBox2 = new TextBox();
             tUtilizator = new TextBox();
             tParola = new TextBox();
+            Btn1 = new Button();
             SuspendLayout();
+            // 
+            // textBox1
+            // 
+            textBox1.BackColor = Color.MediumPurple;
+            textBox1.BorderStyle = BorderStyle.None;
+            textBox1.Font = new Font("Sitka Banner", 21.75F, FontStyle.Bold | FontStyle.Italic);
+            textBox1.ForeColor = SystemColors.ActiveCaptionText;
+            textBox1.Location = new Point(145, 35);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(125, 37);
+            textBox1.TabIndex = 1;
+            textBox1.Text = "Utilizator";
+            textBox1.TextAlign = HorizontalAlignment.Right;
+            textBox1.TextChanged += textBox1_TextChanged;
+            // 
+            // textBox2
+            // 
+            textBox2.BackColor = Color.MediumPurple;
+            textBox2.BorderStyle = BorderStyle.None;
+            textBox2.Font = new Font("Sitka Banner", 21.75F, FontStyle.Bold | FontStyle.Italic);
+            textBox2.ForeColor = SystemColors.ActiveCaptionText;
+            textBox2.Location = new Point(187, 98);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(83, 37);
+            textBox2.TabIndex = 2;
+            textBox2.Text = "Parola";
+            textBox2.TextAlign = HorizontalAlignment.Right;
+            // 
+            // tUtilizator
+            // 
+            tUtilizator.BackColor = Color.Azure;
+            tUtilizator.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
+            tUtilizator.Location = new Point(286, 49);
+            tUtilizator.Name = "tUtilizator";
+            tUtilizator.Size = new Size(199, 29);
+            tUtilizator.TabIndex = 3;
+            tUtilizator.TextChanged += tUtilizator_TextChanged;
+            // 
+            // tParola
+            // 
+            tParola.BackColor = Color.Azure;
+            tParola.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
+            tParola.Location = new Point(286, 112);
+            tParola.Name = "tParola";
+            tParola.Size = new Size(199, 29);
+            tParola.TabIndex = 4;
+            tParola.TextChanged += tParola_TextChanged;
             // 
             // Btn1
             // 
             Btn1.Image = Properties.Resources.barca;
             Btn1.Location = new Point(12, 35);
             Btn1.Name = "Btn1";
-            Btn1.Size = new Size(123, 121);
+            Btn1.Size = new Size(123, 123);
             Btn1.TabIndex = 0;
             Btn1.UseVisualStyleBackColor = true;
             Btn1.Click += Btn1_Click;
-            // 
-            // textBox1
-            // 
-            textBox1.BackColor = Color.MistyRose;
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Font = new Font("Segoe UI Symbol", 15.75F, FontStyle.Bold);
-            textBox1.ForeColor = SystemColors.ActiveCaptionText;
-            textBox1.Location = new Point(159, 44);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 28);
-            textBox1.TabIndex = 1;
-            textBox1.Text = "Utilizator";
-            // 
-            // textBox2
-            // 
-            textBox2.BackColor = Color.MistyRose;
-            textBox2.BorderStyle = BorderStyle.None;
-            textBox2.Font = new Font("Segoe UI Symbol", 15.75F, FontStyle.Bold);
-            textBox2.ForeColor = SystemColors.ActiveCaptionText;
-            textBox2.Location = new Point(190, 97);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(69, 28);
-            textBox2.TabIndex = 2;
-            textBox2.Text = "Parola";
-            // 
-            // tUtilizator
-            // 
-            tUtilizator.Location = new Point(286, 49);
-            tUtilizator.Name = "tUtilizator";
-            tUtilizator.Size = new Size(199, 23);
-            tUtilizator.TabIndex = 3;
-            tUtilizator.TextChanged += tUtilizator_TextChanged;
-            // 
-            // tParola
-            // 
-            tParola.Location = new Point(286, 97);
-            tParola.Name = "tParola";
-            tParola.Size = new Size(199, 23);
-            tParola.TabIndex = 4;
-            tParola.TextChanged += tParola_TextChanged;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.MistyRose;
-            ClientSize = new Size(543, 181);
+            BackColor = Color.MediumPurple;
+            ClientSize = new Size(544, 181);
             Controls.Add(tParola);
             Controls.Add(tUtilizator);
             Controls.Add(textBox2);
@@ -103,11 +110,10 @@
         }
 
         #endregion
-
-        private Button Btn1;
         private TextBox textBox1;
         private TextBox textBox2;
         private TextBox tUtilizator;
         private TextBox tParola;
+        private Button Btn1;
     }
 }
