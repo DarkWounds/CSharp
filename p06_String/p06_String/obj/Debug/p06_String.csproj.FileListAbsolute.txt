@@ -1,6 +1,0 @@
-D:\12A\p06_String\p06_String\bin\Debug\p06_String.exe.config
-D:\12A\p06_String\p06_String\obj\Debug\p06_String.csprojResolveAssemblyReference.cache
-D:\12A\p06_String\p06_String\bin\Debug\p06_String.exe
-D:\12A\p06_String\p06_String\bin\Debug\p06_String.pdb
-D:\12A\p06_String\p06_String\obj\Debug\p06_String.exe
-D:\12A\p06_String\p06_String\obj\Debug\p06_String.pdb
