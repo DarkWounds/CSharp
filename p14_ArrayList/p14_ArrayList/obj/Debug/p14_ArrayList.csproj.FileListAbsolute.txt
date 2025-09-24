@@ -1,0 +1,6 @@
+D:\12A\p14_ArrayList\p14_ArrayList\bin\Debug\p14_ArrayList.exe.config
+D:\12A\p14_ArrayList\p14_ArrayList\bin\Debug\p14_ArrayList.exe
+D:\12A\p14_ArrayList\p14_ArrayList\bin\Debug\p14_ArrayList.pdb
+D:\12A\p14_ArrayList\p14_ArrayList\obj\Debug\p14_ArrayList.csprojResolveAssemblyReference.cache
+D:\12A\p14_ArrayList\p14_ArrayList\obj\Debug\p14_ArrayList.exe
+D:\12A\p14_ArrayList\p14_ArrayList\obj\Debug\p14_ArrayList.pdb
