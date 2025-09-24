@@ -1,0 +1,6 @@
+D:\12A\p12_Liste\p12_Liste\bin\Debug\p12_Liste.exe.config
+D:\12A\p12_Liste\p12_Liste\bin\Debug\p12_Liste.exe
+D:\12A\p12_Liste\p12_Liste\bin\Debug\p12_Liste.pdb
+D:\12A\p12_Liste\p12_Liste\obj\Debug\p12_Liste.csprojResolveAssemblyReference.cache
+D:\12A\p12_Liste\p12_Liste\obj\Debug\p12_Liste.exe
+D:\12A\p12_Liste\p12_Liste\obj\Debug\p12_Liste.pdb
