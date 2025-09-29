@@ -1,0 +1,6 @@
+D:\12A\p17_Queue\p17_Queue\bin\Debug\p17_Queue.exe.config
+D:\12A\p17_Queue\p17_Queue\bin\Debug\p17_Queue.exe
+D:\12A\p17_Queue\p17_Queue\bin\Debug\p17_Queue.pdb
+D:\12A\p17_Queue\p17_Queue\obj\Debug\p17_Queue.csprojResolveAssemblyReference.cache
+D:\12A\p17_Queue\p17_Queue\obj\Debug\p17_Queue.exe
+D:\12A\p17_Queue\p17_Queue\obj\Debug\p17_Queue.pdb

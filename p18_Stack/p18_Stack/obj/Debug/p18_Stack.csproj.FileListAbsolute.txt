@@ -1,0 +1,5 @@
+D:\12A\p18_Stack\p18_Stack\bin\Debug\p18_Stack.exe.config
+D:\12A\p18_Stack\p18_Stack\bin\Debug\p18_Stack.exe
+D:\12A\p18_Stack\p18_Stack\bin\Debug\p18_Stack.pdb
+D:\12A\p18_Stack\p18_Stack\obj\Debug\p18_Stack.exe
+D:\12A\p18_Stack\p18_Stack\obj\Debug\p18_Stack.pdb
