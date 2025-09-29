@@ -1,0 +1,6 @@
+D:\12A\p15_Stack\p15_Stack\bin\Debug\p15_Stack.exe.config
+D:\12A\p15_Stack\p15_Stack\bin\Debug\p15_Stack.exe
+D:\12A\p15_Stack\p15_Stack\bin\Debug\p15_Stack.pdb
+D:\12A\p15_Stack\p15_Stack\obj\Debug\p15_Stack.csprojResolveAssemblyReference.cache
+D:\12A\p15_Stack\p15_Stack\obj\Debug\p15_Stack.exe
+D:\12A\p15_Stack\p15_Stack\obj\Debug\p15_Stack.pdb
