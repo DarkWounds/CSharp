@@ -13,6 +13,11 @@ namespace OTI_2025
 {
     public partial class Form2 : Form
     {
+        int exploratori;
+        public int GetExploratori()
+        {
+            return exploratori;
+        }
         public Form2()
         {
             InitializeComponent();
@@ -31,12 +36,14 @@ namespace OTI_2025
                 if (value < 30 || value > 200)
                 {
                     MessageBox.Show("Numarul de exploratori trebuie sa fie intre 30 si 200!");
+                    exploratori = value;
                     tbExploratori.Text = "";
                     return;
                 }
                 else
                 {
-                    Expeditie form3 = new();
+                    exploratori = value;
+                    Expeditie form3 = new Expeditie(this.exploratori);
                     form3.Show();
                     this.Close();
                 }

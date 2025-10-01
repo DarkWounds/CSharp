@@ -1,0 +1,17 @@
+D:\C-Start\Testul\Testul\bin\Debug\net8.0-windows\Testul.exe
+D:\C-Start\Testul\Testul\bin\Debug\net8.0-windows\Testul.deps.json
+D:\C-Start\Testul\Testul\bin\Debug\net8.0-windows\Testul.runtimeconfig.json
+D:\C-Start\Testul\Testul\bin\Debug\net8.0-windows\Testul.dll
+D:\C-Start\Testul\Testul\bin\Debug\net8.0-windows\Testul.pdb
+D:\C-Start\Testul\Testul\obj\Debug\net8.0-windows\Testul.Form1.resources
+D:\C-Start\Testul\Testul\obj\Debug\net8.0-windows\Testul.csproj.GenerateResource.cache
+D:\C-Start\Testul\Testul\obj\Debug\net8.0-windows\Testul.GeneratedMSBuildEditorConfig.editorconfig
+D:\C-Start\Testul\Testul\obj\Debug\net8.0-windows\Testul.AssemblyInfoInputs.cache
+D:\C-Start\Testul\Testul\obj\Debug\net8.0-windows\Testul.AssemblyInfo.cs
+D:\C-Start\Testul\Testul\obj\Debug\net8.0-windows\Testul.csproj.CoreCompileInputs.cache
+D:\C-Start\Testul\Testul\obj\Debug\net8.0-windows\Testul.sourcelink.json
+D:\C-Start\Testul\Testul\obj\Debug\net8.0-windows\Testul.dll
+D:\C-Start\Testul\Testul\obj\Debug\net8.0-windows\refint\Testul.dll
+D:\C-Start\Testul\Testul\obj\Debug\net8.0-windows\Testul.pdb
+D:\C-Start\Testul\Testul\obj\Debug\net8.0-windows\Testul.genruntimeconfig.cache
+D:\C-Start\Testul\Testul\obj\Debug\net8.0-windows\ref\Testul.dll

@@ -10,7 +10,7 @@ namespace p03_Tablouri
     {
         static void Main(string[] args)
         {
-            int[] a, b;
+           int[] a, b;
             int n = 20;
 
             //1.Generam aleator n elemente din vector
@@ -93,6 +93,7 @@ namespace p03_Tablouri
             //6.Cautare binara (in vector sortat!)
             p = Array.BinarySearch(b, b[3]);
             Console.WriteLine(p);
+
         }
     }
 }
