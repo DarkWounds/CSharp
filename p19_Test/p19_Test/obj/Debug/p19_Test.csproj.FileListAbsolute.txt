@@ -3,3 +3,4 @@ D:\12A\p19_Test\p19_Test\bin\Debug\p19_Test.exe
 D:\12A\p19_Test\p19_Test\bin\Debug\p19_Test.pdb
 D:\12A\p19_Test\p19_Test\obj\Debug\p19_Test.exe
 D:\12A\p19_Test\p19_Test\obj\Debug\p19_Test.pdb
+D:\12A\p19_Test\p19_Test\obj\Debug\p19_Test.csprojResolveAssemblyReference.cache

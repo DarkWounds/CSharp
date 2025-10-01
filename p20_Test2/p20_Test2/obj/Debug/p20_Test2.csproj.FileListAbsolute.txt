@@ -1,0 +1,5 @@
+D:\12A\p20_Test2\p20_Test2\bin\Debug\p20_Test2.exe.config
+D:\12A\p20_Test2\p20_Test2\bin\Debug\p20_Test2.exe
+D:\12A\p20_Test2\p20_Test2\bin\Debug\p20_Test2.pdb
+D:\12A\p20_Test2\p20_Test2\obj\Debug\p20_Test2.exe
+D:\12A\p20_Test2\p20_Test2\obj\Debug\p20_Test2.pdb
