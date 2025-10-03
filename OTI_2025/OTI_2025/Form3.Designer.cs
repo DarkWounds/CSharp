@@ -44,6 +44,7 @@
             pictureBox10 = new PictureBox();
             pictureBox11 = new PictureBox();
             pictureBox1 = new PictureBox();
+            start = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBoxBack).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -56,6 +57,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)start).BeginInit();
             SuspendLayout();
             // 
             // pictureBoxBack
@@ -198,11 +200,21 @@
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;
             // 
+            // start
+            // 
+            start.Location = new Point(757, 204);
+            start.Name = "start";
+            start.Size = new Size(100, 50);
+            start.TabIndex = 13;
+            start.TabStop = false;
+            start.Click += Start_Click;
+            // 
             // Expeditie
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(902, 602);
+            Controls.Add(start);
             Controls.Add(pictureBox1);
             Controls.Add(pictureBox11);
             Controls.Add(pictureBox10);
@@ -231,6 +243,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox11).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)start).EndInit();
             ResumeLayout(false);
         }
 
@@ -250,5 +263,6 @@
         private PictureBox pictureBox10;
         private PictureBox pictureBox11;
         private PictureBox pictureBox1;
+        private PictureBox start;
     }
 }

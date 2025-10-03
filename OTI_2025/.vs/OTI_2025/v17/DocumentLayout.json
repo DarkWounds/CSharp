@@ -7,6 +7,9 @@
       "RelativeMoniker": "D:0:0:{2200BCAB-5F27-4C8B-A70C-E5BC2CDF8895}|OTI_2025\\OTI_2025.csproj|solutionrelative:oti_2025\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2200BCAB-5F27-4C8B-A70C-E5BC2CDF8895}|OTI_2025\\OTI_2025.csproj|D:\\C-Start\\OTI_2025\\oti_2025\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{2200BCAB-5F27-4C8B-A70C-E5BC2CDF8895}|OTI_2025\\OTI_2025.csproj|solutionrelative:oti_2025\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
@@ -15,16 +18,16 @@
       "RelativeMoniker": "D:0:0:{2200BCAB-5F27-4C8B-A70C-E5BC2CDF8895}|OTI_2025\\OTI_2025.csproj|solutionrelative:oti_2025\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{2200BCAB-5F27-4C8B-A70C-E5BC2CDF8895}|OTI_2025\\OTI_2025.csproj|d:\\c-start\\oti_2025\\oti_2025\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2200BCAB-5F27-4C8B-A70C-E5BC2CDF8895}|OTI_2025\\OTI_2025.csproj|solutionrelative:oti_2025\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2200BCAB-5F27-4C8B-A70C-E5BC2CDF8895}|OTI_2025\\OTI_2025.csproj|d:\\c-start\\oti_2025\\oti_2025\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2200BCAB-5F27-4C8B-A70C-E5BC2CDF8895}|OTI_2025\\OTI_2025.csproj|solutionrelative:oti_2025\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2200BCAB-5F27-4C8B-A70C-E5BC2CDF8895}|OTI_2025\\OTI_2025.csproj|D:\\C-Start\\OTI_2025\\oti_2025\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{2200BCAB-5F27-4C8B-A70C-E5BC2CDF8895}|OTI_2025\\OTI_2025.csproj|solutionrelative:oti_2025\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2200BCAB-5F27-4C8B-A70C-E5BC2CDF8895}|OTI_2025\\OTI_2025.csproj|d:\\c-start\\oti_2025\\oti_2025\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2200BCAB-5F27-4C8B-A70C-E5BC2CDF8895}|OTI_2025\\OTI_2025.csproj|solutionrelative:oti_2025\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,11 +37,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "D:\\C-Start\\OTI_2025\\OTI_2025\\Form1.cs",
               "RelativeDocumentMoniker": "OTI_2025\\Form1.cs",
@@ -50,7 +53,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Form2.cs [Design]",
               "DocumentMoniker": "D:\\C-Start\\OTI_2025\\OTI_2025\\Form2.cs",
               "RelativeDocumentMoniker": "OTI_2025\\Form2.cs",
@@ -58,7 +61,19 @@
               "RelativeToolTip": "OTI_2025\\Form2.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-20T10:46:55.574Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Microsoft.Common.CurrentVersion.targets",
+              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ViewState": "AgIAAAEVAAAAAAAAAAAkwBEVAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2025-10-03T06:38:50.699Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
@@ -80,26 +95,27 @@
               "RelativeDocumentMoniker": "OTI_2025\\Form3.cs",
               "ToolTip": "D:\\C-Start\\OTI_2025\\OTI_2025\\Form3.cs",
               "RelativeToolTip": "OTI_2025\\Form3.cs",
-              "ViewState": "AgIAAHkAAAAAAAAAAAAcwIoAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAGIAAAAAAAAAAADwv3AAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-20T10:48:31.081Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Form2.cs",
               "DocumentMoniker": "D:\\C-Start\\OTI_2025\\OTI_2025\\Form2.cs",
               "RelativeDocumentMoniker": "OTI_2025\\Form2.cs",
               "ToolTip": "D:\\C-Start\\OTI_2025\\OTI_2025\\Form2.cs",
               "RelativeToolTip": "OTI_2025\\Form2.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAawCwAAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAIAzwCwAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-19T10:20:59.3Z"
+              "WhenOpened": "2025-09-19T10:20:59.3Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "Form1.cs",
               "DocumentMoniker": "D:\\C-Start\\OTI_2025\\OTI_2025\\Form1.cs",
               "RelativeDocumentMoniker": "OTI_2025\\Form1.cs",
@@ -115,14 +131,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Form3.cs [Design]",
               "DocumentMoniker": "D:\\C-Start\\OTI_2025\\OTI_2025\\Form3.cs",
               "RelativeDocumentMoniker": "OTI_2025\\Form3.cs",
               "ToolTip": "D:\\C-Start\\OTI_2025\\OTI_2025\\Form3.cs [Design]",
               "RelativeToolTip": "OTI_2025\\Form3.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-30T15:04:12.29Z"
+              "WhenOpened": "2025-09-30T15:04:12.29Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }
