@@ -1,0 +1,5 @@
+D:\12A\p25_Exceptie\p25_Exceptie\bin\Debug\p25_Exceptie.exe.config
+D:\12A\p25_Exceptie\p25_Exceptie\bin\Debug\p25_Exceptie.exe
+D:\12A\p25_Exceptie\p25_Exceptie\bin\Debug\p25_Exceptie.pdb
+D:\12A\p25_Exceptie\p25_Exceptie\obj\Debug\p25_Exceptie.exe
+D:\12A\p25_Exceptie\p25_Exceptie\obj\Debug\p25_Exceptie.pdb

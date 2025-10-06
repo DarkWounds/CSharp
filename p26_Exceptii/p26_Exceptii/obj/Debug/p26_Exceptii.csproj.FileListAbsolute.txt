@@ -1,0 +1,5 @@
+D:\12A\p26_Exceptii\p26_Exceptii\bin\Debug\p26_Exceptii.exe.config
+D:\12A\p26_Exceptii\p26_Exceptii\bin\Debug\p26_Exceptii.exe
+D:\12A\p26_Exceptii\p26_Exceptii\bin\Debug\p26_Exceptii.pdb
+D:\12A\p26_Exceptii\p26_Exceptii\obj\Debug\p26_Exceptii.exe
+D:\12A\p26_Exceptii\p26_Exceptii\obj\Debug\p26_Exceptii.pdb
