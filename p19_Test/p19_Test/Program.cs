@@ -10,11 +10,6 @@ namespace p19_Test
 {
     class Program
     {
-        /**
-          3 5 17 12
-          1 2 2 3
-          3 2
-         */
         static void Main(string[] args)
         {
             //Problema 1 --------------------------------------
@@ -24,7 +19,7 @@ namespace p19_Test
             //Sa se afiseze la ecran pe prima linie numarul de numere din sir,
             //pe a doua linie, numerele memorate in tablou,
             //iar pe a treia linie numerele distincte care se gasesc in tablou.
-            /**
+            /*
              * Exemplu:
                 3 5 17 12
                 1 2 2 3
