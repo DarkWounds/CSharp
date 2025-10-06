@@ -1,0 +1,6 @@
+D:\12A\p23_HashSet\p23_HashSet\bin\Debug\p23_HashSet.exe.config
+D:\12A\p23_HashSet\p23_HashSet\bin\Debug\p23_HashSet.exe
+D:\12A\p23_HashSet\p23_HashSet\bin\Debug\p23_HashSet.pdb
+D:\12A\p23_HashSet\p23_HashSet\obj\Debug\p23_HashSet.csprojResolveAssemblyReference.cache
+D:\12A\p23_HashSet\p23_HashSet\obj\Debug\p23_HashSet.exe
+D:\12A\p23_HashSet\p23_HashSet\obj\Debug\p23_HashSet.pdb
