@@ -1,4 +1,5 @@
-﻿namespace OTI_2025
+﻿
+namespace OTI_2025
 {
     partial class Expeditie
     {
@@ -69,6 +70,7 @@
             pictureBoxBack.TabIndex = 0;
             pictureBoxBack.TabStop = false;
             pictureBoxBack.Click += pictureBoxBack_Click;
+            pictureBoxBack.Paint += PictureBoxBack_Paint;
             // 
             // imageList1
             // 
@@ -93,7 +95,7 @@
             // 
             pictureBox2.BackColor = Color.Transparent;
             pictureBox2.Image = Properties.Resources.insula2;
-            pictureBox2.Location = new Point(232, 120);
+            pictureBox2.Location = new Point(717, 215);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(50, 50);
             pictureBox2.TabIndex = 2;
@@ -103,9 +105,9 @@
             // pictureBox3
             // 
             pictureBox3.BackColor = Color.Transparent;
-            pictureBox3.Location = new Point(443, 120);
+            pictureBox3.Location = new Point(717, 303);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(100, 50);
+            pictureBox3.Size = new Size(50, 50);
             pictureBox3.TabIndex = 3;
             pictureBox3.TabStop = false;
             pictureBox3.Click += pictureBox3_Click;
@@ -113,9 +115,9 @@
             // pictureBox4
             // 
             pictureBox4.BackColor = Color.Transparent;
-            pictureBox4.Location = new Point(232, 271);
+            pictureBox4.Location = new Point(621, 504);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(100, 50);
+            pictureBox4.Size = new Size(50, 50);
             pictureBox4.TabIndex = 4;
             pictureBox4.TabStop = false;
             pictureBox4.Click += pictureBox4_Click;
@@ -123,9 +125,9 @@
             // pictureBox5
             // 
             pictureBox5.BackColor = Color.Transparent;
-            pictureBox5.Location = new Point(454, 271);
+            pictureBox5.Location = new Point(350, 452);
             pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(100, 50);
+            pictureBox5.Size = new Size(50, 50);
             pictureBox5.TabIndex = 5;
             pictureBox5.TabStop = false;
             pictureBox5.Click += pictureBox5_Click;
@@ -133,9 +135,9 @@
             // pictureBox6
             // 
             pictureBox6.BackColor = Color.Transparent;
-            pictureBox6.Location = new Point(625, 204);
+            pictureBox6.Location = new Point(280, 448);
             pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(100, 50);
+            pictureBox6.Size = new Size(50, 50);
             pictureBox6.TabIndex = 6;
             pictureBox6.TabStop = false;
             pictureBox6.Click += pictureBox6_Click;
@@ -143,9 +145,9 @@
             // pictureBox7
             // 
             pictureBox7.BackColor = Color.Transparent;
-            pictureBox7.Location = new Point(625, 320);
+            pictureBox7.Location = new Point(254, 293);
             pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(100, 50);
+            pictureBox7.Size = new Size(50, 50);
             pictureBox7.TabIndex = 7;
             pictureBox7.TabStop = false;
             pictureBox7.Click += pictureBox7_Click;
@@ -153,9 +155,9 @@
             // pictureBox8
             // 
             pictureBox8.BackColor = Color.Transparent;
-            pictureBox8.Location = new Point(443, 420);
+            pictureBox8.Location = new Point(303, 110);
             pictureBox8.Name = "pictureBox8";
-            pictureBox8.Size = new Size(100, 50);
+            pictureBox8.Size = new Size(50, 50);
             pictureBox8.TabIndex = 8;
             pictureBox8.TabStop = false;
             pictureBox8.Click += pictureBox8_Click;
@@ -163,9 +165,9 @@
             // pictureBox9
             // 
             pictureBox9.BackColor = Color.Transparent;
-            pictureBox9.Location = new Point(217, 420);
+            pictureBox9.Location = new Point(494, 32);
             pictureBox9.Name = "pictureBox9";
-            pictureBox9.Size = new Size(100, 50);
+            pictureBox9.Size = new Size(50, 50);
             pictureBox9.TabIndex = 9;
             pictureBox9.TabStop = false;
             pictureBox9.Click += pictureBox9_Click;
@@ -173,9 +175,9 @@
             // pictureBox10
             // 
             pictureBox10.BackColor = Color.Transparent;
-            pictureBox10.Location = new Point(65, 350);
+            pictureBox10.Location = new Point(413, 315);
             pictureBox10.Name = "pictureBox10";
-            pictureBox10.Size = new Size(100, 50);
+            pictureBox10.Size = new Size(50, 50);
             pictureBox10.TabIndex = 10;
             pictureBox10.TabStop = false;
             pictureBox10.Click += pictureBox10_Click;
@@ -183,9 +185,9 @@
             // pictureBox11
             // 
             pictureBox11.BackColor = Color.Transparent;
-            pictureBox11.Location = new Point(65, 187);
+            pictureBox11.Location = new Point(559, 343);
             pictureBox11.Name = "pictureBox11";
-            pictureBox11.Size = new Size(100, 50);
+            pictureBox11.Size = new Size(50, 50);
             pictureBox11.TabIndex = 11;
             pictureBox11.TabStop = false;
             pictureBox11.Click += pictureBox11_Click;
@@ -193,7 +195,7 @@
             // pictureBox1
             // 
             pictureBox1.BackColor = Color.Transparent;
-            pictureBox1.Location = new Point(65, 54);
+            pictureBox1.Location = new Point(781, 180);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(100, 50);
             pictureBox1.TabIndex = 12;
@@ -202,7 +204,7 @@
             // 
             // start
             // 
-            start.Location = new Point(757, 204);
+            start.Location = new Point(781, 149);
             start.Name = "start";
             start.Size = new Size(100, 50);
             start.TabIndex = 13;

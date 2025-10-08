@@ -1,13 +1,17 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing;
+using System.Drawing.Configuration;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.LinkLabel;
 
 
 namespace OTI_2025
@@ -15,9 +19,21 @@ namespace OTI_2025
     public partial class Expeditie : Form
     {
         int exploratori = 0, hrana = 0, bogatii = 0, incTotala = 0;
-        int[][] a;
+        Point p1 = new Point(0, 0);
+        Point p2 = new Point(0, 0);
+        int zile = 100;
+        int[,] a;
+        List<(Point, Point)> pointsPaint = new List<(Point, Point)>();
+        ArrayList distanteInsule = new ArrayList();
+        ArrayList nume = new ArrayList();
+
         Locatii pozBarca;
 
+        struct incarcatura
+        {
+            int incNrIntreg;
+            int incNrZecimal;   
+        };
         struct Locatii
         {
             public int x;
@@ -37,7 +53,47 @@ namespace OTI_2025
             public int viz;
         };
 
+        struct distante
+        {
+            public int dist;
+            public int x;
+            public int y;
+        };
+
         insule[] insula = new insule[12];
+
+        private void PictureBoxBack_Paint(object sender, PaintEventArgs e)
+        {
+            using (Pen greenPen = new Pen(Color.Green, 3))
+            {
+                foreach (var line in pointsPaint)
+                {
+                    e.Graphics.DrawLine(greenPen, line.Item1, line.Item2);
+                }
+            }
+
+            using (Brush transparentBrush = new SolidBrush(Color.FromArgb(128, Color.Black)))
+            {
+                foreach(var d in distanteInsule)
+                {
+                    int x = ((distante)d).x;
+                    int y = ((distante)d).y;
+                    int dist = ((distante)d).dist;
+                    e.Graphics.DrawString(dist + " km", new Font("Arial", 16, FontStyle.Bold), transparentBrush, new PointF(x, y));
+                }
+            }
+
+            using (Brush transparentBrush = new SolidBrush(Color.FromArgb(128, Color.Black)))
+            {
+                foreach (var d in nume)
+                {
+                    int x = ((Locatii)d).x;
+                    int y = ((Locatii)d).y;
+                    string nume = insula[((Locatii)d).id].nume;
+                    e.Graphics.DrawString(nume, new Font("Arial", 16, FontStyle.Bold), transparentBrush, new PointF(x, y));
+                }
+            }
+        }
 
         public Expeditie(int exploratori)
         {
@@ -55,6 +111,89 @@ namespace OTI_2025
             InitializareInsule();
             ImgInsule();
 
+        }
+
+        public void AllActions(object sender)
+        {
+            string name = "";
+            PictureBox pb = sender as PictureBox;
+            if (pb != null)
+            {
+                name = pb.Name;
+            }
+            int i = int.Parse(name.Substring(10));
+            if (insula[i].viz == 0)
+            {
+                insula[i].viz = 1;
+                Pen greenPen = new Pen(Color.Green, 3);
+                p1 = new Point(pozBarca.x, pozBarca.y);
+                p2 = new Point(insula[i].x, insula[i].y);
+                distante d;
+                d.dist = (int)a[i, pozBarca.id];
+                int zil = d.dist / 100;
+                int hrn = 2 * exploratori * zil;
+                hrana -= hrn;
+                if(hrana < 0)
+                {
+                    MessageBox.Show("Esuat, hrana insuficienta!");
+                    Form2 form2 = new Form2();
+                    this.Close();
+                }
+                MessageBox.Show("Ai navigat " + zil + " zile si ai consumat " + hrn + " kg");
+                d.x = (pozBarca.x + insula[i].x) / 2;
+                d.y = (pozBarca.y + insula[i].y) / 2;
+                distanteInsule.Add(d);
+                pointsPaint.Add((p1, p2));
+                this.Invalidate();
+                pozBarca.x = insula[i].x;
+                pozBarca.y = insula[i].y;
+                pozBarca.id = insula[i].id;
+                start.Location = new Point(pozBarca.x, pozBarca.y);
+                if (insula[i].id > 2 && insula[i].id < 7)
+                {
+                    hrn = 2 * exploratori * zile;
+                    int incTot = hrn + 90 * exploratori + bogatii;
+                    hrana = 2 * exploratori * zile;
+                    if (incTot > 100 * 1000)
+                    {
+                        incTotala = 100 * 1000;
+                        bogatii = incTotala - hrana - 90 * exploratori;
+                    }
+                    else incTotala = incTot;
+                }
+                listView1.Items[3].Text = "hrana " + hrana + "kg";
+                listView1.Items[0].Text = "incarcatura " + incTotala / 1000 + " t";
+                listView1.Items[1].Text = "bogatii " + bogatii + " kg";
+                int bgt = 0;
+                if (insula[i].bogatii > 0)
+                {
+                    Random r = new Random();
+                    bgt = r.Next(10, 101);
+                    int val = 0;
+                    if (incTotala + bgt * 1000 < 100 * 1000)
+                    {
+                        val = bgt;
+                        bogatii += (bgt * 1000);
+                    }
+                    else
+                    {
+                        bogatii += (100 * 1000 - incTotala);
+                        val = (100 * 1000 - incTotala) / 1000;
+                        incTotala = 100 * 1000;
+                    }
+                    MessageBox.Show(insula[i].descriere + "\n" + "Pe insula sunt " + bgt 
+                        + " tone de bogatii" + "\n" + "Exploratorii incarca " + val + " tone de bogatii");
+                }
+                listView1.Items[3].Text = "hrana " + hrana;
+                listView1.Items[0].Text = "incarcatura " + incTotala / 1000 + " t";
+                listView1.Items[1].Text = "bogatii " + bogatii + " kg";
+                Locatii numeInsule;
+                numeInsule.x = insula[i].x;
+                numeInsule.y = insula[i].y - 20;
+                numeInsule.id = insula[i].id;
+                nume.Add(numeInsule);
+            }
+            else MessageBox.Show("Interzi!");
         }
 
         public void ImgInsule()
@@ -84,11 +223,11 @@ namespace OTI_2025
         public void Insule()
         {
             string path = @"D:\C-Start\OJTI_2025_C#_Resurse\insule.txt";
+            int i = 1;
             try
             {
                 StreamReader insuleInfo = new StreamReader(path);
                 string linie;
-                int i = 1;
                 linie = insuleInfo.ReadLine();
                 while ((linie = insuleInfo.ReadLine()) != null)
                 {
@@ -109,27 +248,55 @@ namespace OTI_2025
                     }
                     i++;
                 }
-                a = new int[i + 1][];
-
-                        
-                    
+                insuleInfo.Close();
             }
             catch
             {
                 MessageBox.Show("Eroare la citirea fișierului insule.txt:\n");
             }
 
+            a = new int[i + 1, i + 1];
+            for (int x = 0; x <= i; x++)
+                for (int y = 0; y <= i; y++)
+                    a[x, y] = 0;
+
+            string path2 = @"D:\C-Start\OJTI_2025_C#_Resurse\distante.txt";
+            try
+            {
+                StreamReader insuleInfo2 = new StreamReader(path2);
+                string linie;
+                i = 1;
+                linie = insuleInfo2.ReadLine();
+                while ((linie = insuleInfo2.ReadLine()) != null)
+                {
+                    string[] date = linie.Split('#');
+                    for (int j = 1; j < i; j++)
+                        if (i != j)
+                        {
+                            a[i, j] = int.Parse(date[j]);
+                            a[j, i] = a[i, j];
+                        } 
+                        else
+                            a[i, j] = 0;
+                    i++;
+                }
+                insuleInfo2.Close();
+            }
+            catch
+            {
+                MessageBox.Show("Eroare la citirea fișierului insule.txt:\n");
+            }
         }
 
         private void Form3_Load(object sender, EventArgs e)
         {
             listView1.BackColor = TransparencyKey;
-            hrana = 2 * exploratori * 100;
-            incTotala = hrana + 90 * exploratori + bogatii;
-            listView1.Items.Add(new ListViewItem("incarcatura " + incTotala, 0));
-            listView1.Items.Add(new ListViewItem("bogatii " + bogatii, 1));
+            hrana = 2 * exploratori * zile;
+            incTotala = (hrana + 90 * exploratori + bogatii);
+            listView1.Items.Add(new ListViewItem("incarcatura " + incTotala/1000 + " t", 0));
+            listView1.Items.Add(new ListViewItem("bogatii " + bogatii + " kg", 1));
             listView1.Items.Add(new ListViewItem("explorator " + exploratori, 2));
-            listView1.Items.Add(new ListViewItem("hrana " + hrana, 3));
+            listView1.Items.Add(new ListViewItem("hrana " + hrana + " kg", 3));
         }
 
         public void InitializareInsule()
@@ -138,12 +305,12 @@ namespace OTI_2025
             pictureBox2.Location = new Point(insula[2].x, insula[2].y);
             pictureBox3.Location = new Point(insula[3].x, insula[3].y);
             pictureBox4.Location = new Point(insula[4].x, insula[4].y);
-            pictureBox5.Location = new Point(insula[5].x, insula[5].y); 
+            pictureBox5.Location = new Point(insula[5].x, insula[5].y);
             pictureBox6.Location = new Point(insula[6].x, insula[6].y);
             pictureBox7.Location = new Point(insula[7].x, insula[7].y);
             pictureBox8.Location = new Point(insula[8].x, insula[8].y);
             pictureBox9.Location = new Point(insula[9].x, insula[9].y);
-            pictureBox10.Location = new Point(insula[10].x, insula[10].y);  
+            pictureBox10.Location = new Point(insula[10].x, insula[10].y);
             pictureBox11.Location = new Point(insula[11].x, insula[11].y);
 
             start.Location = new Point(insula[1].x, insula[1].y);
@@ -161,129 +328,57 @@ namespace OTI_2025
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            if (a[3][pozBarca.id] == 0)
-            {
-                a[3][pozBarca.id] = 1;
-                pozBarca.x = insula[3].x;
-                pozBarca.y = insula[3].y;
-                start.Location = new Point(pozBarca.x, pozBarca.y);
-            }   
-            else MessageBox.Show("Interzi!");
+            AllActions(sender);
         }
 
         private void pictureBox8_Click(object sender, EventArgs e)
         {
-            if (a[8][pozBarca.id] == 0)
-            {
-                a[8][pozBarca.id] = 1;
-                pozBarca.x = insula[8].x;
-                pozBarca.y = insula[8].y;
-                start.Location = new Point(pozBarca.x, pozBarca.y);
-            }
-
-            else MessageBox.Show("Interzis!");
+            AllActions(sender);
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            if (a[5][pozBarca.id] == 0)
-            {
-                a[5][pozBarca.id] = 1;
-                pozBarca.x = insula[5].x;
-                pozBarca.y = insula[5].y;
-                start.Location = new Point(pozBarca.x, pozBarca.y);
-            }
-
-            else MessageBox.Show("Interzis!");
+            AllActions(sender);
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            if (a[2][pozBarca.id] == 0)
-            {
-                a[2][pozBarca.id] = 1;
-                pozBarca.x = insula[2].x;
-                pozBarca.y = insula[2].y;
-                start.Location = new Point(pozBarca.x, pozBarca.y);
-            }
-
-            else MessageBox.Show("Interzi!");
+            AllActions(sender);
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-
-             a[3][pozBarca.id] = 1;
-             pozBarca.x = insula[3].x;
-             pozBarca.y = insula[3].y;
-             start.Location = new Point(pozBarca.x, pozBarca.y);
+            AllActions(sender);
         }
 
         private void pictureBox11_Click(object sender, EventArgs e)
         {
-            if (a[11][pozBarca.id] == 0)
-            {
-                a[11][pozBarca.id] = 1;
-                pozBarca.x = insula[11].x;
-                pozBarca.y = insula[11].y;
-                start.Location = new Point(pozBarca.x, pozBarca.y);
-            }
-            else MessageBox.Show("Interzi!");
+            AllActions(sender);
         }
 
         private void pictureBox10_Click(object sender, EventArgs e)
         {
-            if (a[10][pozBarca.id] == 0)
-            {
-                a[10][pozBarca.id] = 1;
-                pozBarca.x = insula[10].x;
-                pozBarca.y = insula[10].y;
-                start.Location = new Point(pozBarca.x, pozBarca.y);
-            }
-            else MessageBox.Show("Interzi!");
+            AllActions(sender);
         }
 
         private void pictureBox9_Click(object sender, EventArgs e)
         {
-            if (a[9][pozBarca.id] == 0)
-            {
-                a[9][pozBarca.id] = 1;
-                pozBarca.x = insula[9].x;
-                pozBarca.y = insula[9].y;
-                start.Location = new Point(pozBarca.x, pozBarca.y);
-            }
-            else MessageBox.Show("Interzi!");
+            AllActions(sender);
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            if (a[4][pozBarca.id] == 0)
-            {
-                a[4][pozBarca.id] = 1;
-                pozBarca.x = insula[4].x;
-                pozBarca.y = insula[4].y;
-                start.Location = new Point(pozBarca.x, pozBarca.y);
-            }
-            else MessageBox.Show("Interzi!");
+            AllActions(sender);
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
-            if (a[6][pozBarca.id] == 0)
-            {
-                a[6][pozBarca.id] = 1;
-                pozBarca.x = insula[6].x;
-                pozBarca.y = insula[6].y;
-                start.Location = new Point(pozBarca.x, pozBarca.y);
-            }
-            else MessageBox.Show("Interzi!");
+            AllActions(sender);
         }
 
         private void pictureBox7_Click(object sender, EventArgs e)
         {
-                pozBarca.x = insula[7].x;
-                pozBarca.y = insula[7].y;
-                start.Location = new Point(pozBarca.x, pozBarca.y);
+            AllActions(sender);
         }
 
         private void Start_Click(object sender, EventArgs e)
