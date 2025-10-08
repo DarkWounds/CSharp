@@ -137,7 +137,10 @@ namespace OTI_2025
                 {
                     MessageBox.Show("Esuat, hrana insuficienta!");
                     Form2 form2 = new Form2();
+                    form2.Show();
                     this.Close();
+                    return;
+                    
                 }
                 MessageBox.Show("Ai navigat " + zil + " zile si ai consumat " + hrn + " kg");
                 d.x = (pozBarca.x + insula[i].x) / 2;
@@ -149,7 +152,7 @@ namespace OTI_2025
                 pozBarca.y = insula[i].y;
                 pozBarca.id = insula[i].id;
                 start.Location = new Point(pozBarca.x, pozBarca.y);
-                if (insula[i].id > 2 && insula[i].id < 7)
+                if (insula[i].id >= 2 && insula[i].id <= 7)
                 {
                     hrn = 2 * exploratori * zile;
                     int incTot = hrn + 90 * exploratori + bogatii;
@@ -184,7 +187,24 @@ namespace OTI_2025
                     MessageBox.Show(insula[i].descriere + "\n" + "Pe insula sunt " + bgt 
                         + " tone de bogatii" + "\n" + "Exploratorii incarca " + val + " tone de bogatii");
                 }
-                listView1.Items[3].Text = "hrana " + hrana;
+                listView1.Items[3].Text = "hrana " + hrana + " kg";
+                listView1.Items[0].Text = "incarcatura " + incTotala / 1000 + " t";
+                listView1.Items[1].Text = "bogatii " + bogatii + " kg";
+                if(insula[i].virusi > 0 && insula[i].id >= 8 && insula[i].id <= 11 )
+                {
+                   exploratori /= 2;
+                    if(exploratori < 30)
+                    {
+                        MessageBox.Show("Esuat, prea putini exploratori!");
+                        Form2 form2 = new Form2();
+                        form2.Show();
+                        this.Close();
+                        return;
+                    }
+                    else incTotala = hrana + 90 * exploratori + bogatii;
+                }
+                listView1.Items[3].Text = "hrana " + hrana + " kg";
+                listView1.Items[2].Text = "exploratori" + exploratori;
                 listView1.Items[0].Text = "incarcatura " + incTotala / 1000 + " t";
                 listView1.Items[1].Text = "bogatii " + bogatii + " kg";
                 Locatii numeInsule;
@@ -348,7 +368,20 @@ namespace OTI_2025
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            AllActions(sender);
+            int incremented = 0;
+            foreach(var ins in insula)
+            {
+                if (ins.viz == 1 && ins.id >= 2 || ins.id <= 7)
+                    incremented++;
+            }
+            if(incremented == 6)
+            {
+                MessageBox.Show("Felicitări, ai refăcut traseul lui Columb! ");
+                Form2 form2 = new Form2();
+                form2.Show();
+                this.Close();
+            }
+            else MessageBox.Show("Traseu incomplet! ");
         }
 
         private void pictureBox11_Click(object sender, EventArgs e)
