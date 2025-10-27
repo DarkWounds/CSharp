@@ -83,6 +83,16 @@ namespace OTI_2025.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap barcaAI {
+            get {
+                object obj = ResourceManager.GetObject("barcaAI", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Harta900x600 {
             get {
                 object obj = ResourceManager.GetObject("Harta900x600", resourceCulture);

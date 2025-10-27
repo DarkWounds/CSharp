@@ -19,21 +19,28 @@ namespace OTI_2025
     public partial class Expeditie : Form
     {
         int exploratori = 0, hrana = 0, bogatii = 0, incTotala = 0;
+        int exploratoriInitiali = 0;
         Point p1 = new Point(0, 0);
         Point p2 = new Point(0, 0);
         int zile = 100;
         int[,] a;
+
         List<(Point, Point)> pointsPaint = new List<(Point, Point)>();
-        ArrayList distanteInsule = new ArrayList();
-        ArrayList nume = new ArrayList();
+        public ArrayList distanteInsule = new ArrayList();
+        public ArrayList nume = new ArrayList();
 
         Locatii pozBarca;
 
-        struct incarcatura
+        public void ListaNume(ListBox t)
         {
-            int incNrIntreg;
-            int incNrZecimal;   
-        };
+            for (int i = 0; i < nume.Count; i++)
+            {
+                int x = ((Locatii)nume[i]).id;
+                if(x >= 2 && x <= 7)
+                    t.Items.Add(insula[x].nume);
+            }
+        }
+
         struct Locatii
         {
             public int x;
@@ -41,7 +48,7 @@ namespace OTI_2025
             public int id;
         }
 
-        struct insule
+        public struct insule
         {
             public int id;
             public int x;
@@ -62,7 +69,112 @@ namespace OTI_2025
 
         insule[] insula = new insule[12];
 
-        private void PictureBoxBack_Paint(object sender, PaintEventArgs e)
+        public void SelectareInsulaSalvare(string name)
+        {
+            ArrayList temporar = new ArrayList();
+            int i = 0;
+            int p = ((Locatii)nume[i]).id;
+            for (i = 0; i < nume.Count && insula[p].nume != name; i++)
+            {
+                p = ((Locatii)nume[i]).id;
+                temporar.Add(nume[i]);
+            }
+            nume = temporar;
+        }
+
+        public void MutareBarca(string name)
+        {
+            for (int i = 0; i < nume.Count; i++)
+            {
+                int p = ((Locatii)nume[i]).id;
+                if (insula[p].nume != name)
+                {
+                    int x = insula[p].x;
+                    int y = insula[p].y;
+                    start.Location = new Point(x, y);
+                }
+
+            }
+        }
+
+        public Bitmap DeseneazaTraseuPeHarta()
+        {
+            // Creează un bitmap nou cu dimensiunile hărții
+            Bitmap bitmap = new Bitmap(900, 600);
+
+            using (Graphics g = Graphics.FromImage(bitmap))
+            {
+                // Desenează harta de fundal
+                g.DrawImage(Properties.Resources.Harta900x600, 0, 0, 900, 600);
+
+                // Desenează liniile verzi ale traseului
+                using (Pen greenPen = new Pen(Color.Green, 3))
+                {
+                    foreach (var line in pointsPaint)
+                    {
+                        g.DrawLine(greenPen, line.Item1, line.Item2);
+                    }
+                }
+
+                // Desenează distanțele
+                using (Brush transparentBrush = new SolidBrush(Color.FromArgb(128, Color.Black)))
+                {
+                    foreach (var d in distanteInsule)
+                    {
+                        int x = ((distante)d).x;
+                        int y = ((distante)d).y;
+                        int dist = ((distante)d).dist;
+                        g.DrawString(dist + " km ", new Font("Arial", 16, FontStyle.Bold), transparentBrush, new PointF(x, y));
+                    }
+                }
+
+                // Desenează numele insulelor
+                using (Brush transparentBrush = new SolidBrush(Color.FromArgb(128, Color.Black)))
+                {
+                    foreach (var d in nume)
+                    {
+                        int x = ((Locatii)d).x;
+                        int y = ((Locatii)d).y;
+                        string numeInsula = insula[((Locatii)d).id].nume;
+                        g.DrawString(numeInsula, new Font("Arial", 16, FontStyle.Bold), transparentBrush, new PointF(x, y));
+                    }
+                }
+
+                // Desenează imaginile insulelor
+                ImgInsule();
+                for (int i = 2; i <= 11; i++)
+                {
+                        Bitmap insulaImg = GetInsulaImage(i);
+                        if (insulaImg != null 
+                        && insula[i].x != pozBarca.x && insula[i].y != pozBarca.y)
+                       {
+                           g.DrawImage(insulaImg, insula[i].x, insula[i].y, 50, 50);
+                       }
+                }
+                g.DrawImage(start.Image, pozBarca.x, pozBarca.y, 50, 50);
+            }
+            return bitmap;
+        }
+
+        public Bitmap GetInsulaImage(int x)
+        {
+            string id = x.ToString();
+            string s = "pictureBox" + id;
+            PictureBox pb = this.Controls.Find(s, true).FirstOrDefault() as PictureBox;
+            Bitmap bitmap = new Bitmap(pb.Image);
+            return bitmap;
+        }
+
+
+        public void SalvareImagine()
+        {
+            //pictureBoxBack.Image.Save("D:\\C-Start\\OJTI_2025_C#_Resurse\\harta_modificata.png");
+            Bitmap bitmap = DeseneazaTraseuPeHarta();
+            string path = @"D:\C-Start\OJTI_2025_C#_Resurse\harta_modificata.png";
+            bitmap.Save(path);
+        }
+
+        public void PictureBoxBack_Paint(object sender, PaintEventArgs e)
         {
             using (Pen greenPen = new Pen(Color.Green, 3))
             {
@@ -79,7 +191,7 @@ namespace OTI_2025
                     int x = ((distante)d).x;
                     int y = ((distante)d).y;
                     int dist = ((distante)d).dist;
-                    e.Graphics.DrawString(dist + " km", new Font("Arial", 16, FontStyle.Bold), transparentBrush, new PointF(x, y));
+                    e.Graphics.DrawString(dist + " km ", new Font("Arial", 16, FontStyle.Bold), transparentBrush, new PointF(x, y));
                 }
             }
 
@@ -95,22 +207,33 @@ namespace OTI_2025
             }
         }
 
+        public int GetExploratori()
+        {
+            return exploratoriInitiali;
+        }
+
         public Expeditie(int exploratori)
         {
             InitializeComponent();
-            this.exploratori = exploratori;
-            listView1.BackColor = TransparencyKey;
-            pictureBoxBack.Image = Properties.Resources.Harta900x600;
-            this.StartPosition = FormStartPosition.CenterScreen;
+            InitializareTotala(exploratori);
+            this.KeyPreview = true;
+            this.KeyDown += Expeditie_KeyDown;
+        }
 
-            this.listView1.SmallImageList = this.imageList1;
-            this.listView1.View = System.Windows.Forms.View.SmallIcon;
-            this.Controls.Add(this.listView1);
-            listView1.BringToFront();
-            Insule();
-            InitializareInsule();
-            ImgInsule();
+        public void Expeditie_Closed(object sender, FormClosingEventArgs e)
+        {
 
+            Application.Exit();
+        }
+
+        private void Expeditie_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.S)
+            {
+                this.Visible = false;
+                Save saveForm = new Save(this);
+                saveForm.Visible = true;
+            }
         }
 
         public void AllActions(object sender)
@@ -240,7 +363,7 @@ namespace OTI_2025
             pictureBox11.Image = Properties.Resources.insula11;
         }
 
-        public void Insule()
+        public void Insule(insule[] ins)
         {
             string path = @"D:\C-Start\OJTI_2025_C#_Resurse\insule.txt";
             int i = 1;
@@ -252,19 +375,19 @@ namespace OTI_2025
                 while ((linie = insuleInfo.ReadLine()) != null)
                 {
                     string[] date = linie.Split('#');
-                    insula[i].id = int.Parse(date[0]);
-                    insula[i].nume = date[1];
-                    insula[i].x = int.Parse(date[2]);
-                    insula[i].y = int.Parse(date[3]);
-                    insula[i].bogatii = int.Parse(date[4]);
-                    insula[i].virusi = int.Parse(date[5]);
-                    insula[i].descriere = date[6];
-                    insula[i].viz = 0;
+                    ins[i].id = int.Parse(date[0]);
+                    ins[i].nume = date[1];
+                    ins[i].x = int.Parse(date[2]);
+                    ins[i].y = int.Parse(date[3]);
+                    ins[i].bogatii = int.Parse(date[4]);
+                    ins[i].virusi = int.Parse(date[5]);
+                    ins[i].descriere = date[6];
+                    ins[i].viz = 0;
                     if (i == 1)
                     {
-                        pozBarca.x = insula[i].x;
-                        pozBarca.y = insula[i].y;
-                        pozBarca.id = insula[i].id;
+                        pozBarca.x = ins[i].x;
+                        pozBarca.y = ins[i].y;
+                        pozBarca.id = ins[i].id;
                     }
                     i++;
                 }
@@ -338,7 +461,7 @@ namespace OTI_2025
 
         private void pictureBoxBack_Click(object sender, EventArgs e)
         {
-
+           // pictureBoxBack.Image.Save("D:\\C-Start\\OJTI_2025_C#_Resurse\\harta_modificata.png");
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
@@ -369,19 +492,39 @@ namespace OTI_2025
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             int incremented = 0;
-            foreach(var ins in insula)
+            for (int i = 0; i < insula.Length - 1; i++)
             {
-                if (ins.viz == 1 && ins.id >= 2 || ins.id <= 7)
+                insule t, d;
+                t.viz = insula[i].viz; t.id = insula[i].id;
+                d.viz = insula[i + 1].viz; d.id = insula[i + 1].id;
+
+                if (t.viz == 1 && d.viz == 1 && t.id < d.id && t.id >= 2 && t.id <= 7
+                    && d.id >= 2 && d.id <= 7)
                     incremented++;
             }
-            if(incremented == 6)
+
+            if(incremented == 5)
             {
                 MessageBox.Show("Felicitări, ai refăcut traseul lui Columb! ");
-                Form2 form2 = new Form2();
-                form2.Show();
-                this.Close();
             }
-            else MessageBox.Show("Traseu incomplet! ");
+            else MessageBox.Show("Traseu incomplet! " + incremented);
+        }
+
+        public void InitializareTotala(int exploratori)
+        {
+            this.exploratori = exploratori;
+            exploratoriInitiali = exploratori;
+            listView1.BackColor = TransparencyKey;
+            pictureBoxBack.Image = Properties.Resources.Harta900x600;
+            this.StartPosition = FormStartPosition.CenterScreen;
+
+            this.listView1.SmallImageList = this.imageList1;
+            this.listView1.View = System.Windows.Forms.View.SmallIcon;
+            this.Controls.Add(this.listView1);
+            listView1.BringToFront();
+            Insule(insula);
+            InitializareInsule();
+            ImgInsule();
         }
 
         private void pictureBox11_Click(object sender, EventArgs e)

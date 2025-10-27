@@ -18,6 +18,7 @@ namespace OTI_2025
         {
             return exploratori;
         }
+
         public Form2()
         {
             InitializeComponent();
@@ -26,6 +27,12 @@ namespace OTI_2025
             limg.LargeImageList = imageList1;
             limg.Items.Add("", 2);
             textBox1.ReadOnly = true;
+            this.FormClosing += Form2_Closed;
+        }
+
+        public void Form2_Closed(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
 
         private void BtnSet_Click(object sender, EventArgs e)
@@ -33,19 +40,18 @@ namespace OTI_2025
             try
             {
                 int value = int.Parse(tbExploratori.Text);
+                exploratori = value;
                 if (value < 30 || value > 200)
                 {
-                    MessageBox.Show("Numarul de exploratori trebuie sa fie intre 30 si 200!");
-                    exploratori = value;
+                    MessageBox.Show("Numarul de exploratori trebuie sa fie intre 30 si 200!");  
                     tbExploratori.Text = "";
                     return;
                 }
                 else
                 {
-                    exploratori = value;
                     Expeditie form3 = new Expeditie(this.exploratori);
                     form3.Show();
-                    this.Close();
+                    this.Hide();
                 }
             }
             catch (FormatException)

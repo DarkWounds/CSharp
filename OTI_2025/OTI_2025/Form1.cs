@@ -14,6 +14,11 @@ namespace OTI_2025
             textBox2.ReadOnly = true;
         }
 
+        public void Form1_Closed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
         private void Btn1_Click(object sender, EventArgs e)
         {
             if (tUtilizator.Text != email || tParola.Text != parola)
