@@ -38,7 +38,7 @@
             pictureBox1.BackColor = Color.Transparent;
             pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
             pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox1.Location = new Point(330, 166);
+            pictureBox1.Location = new Point(365, 170);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(99, 97);
             pictureBox1.TabIndex = 0;
@@ -50,7 +50,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Back3;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(804, 451);
             Controls.Add(pictureBox1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Miscare";

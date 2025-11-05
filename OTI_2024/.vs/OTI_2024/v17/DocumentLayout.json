@@ -7,7 +7,7 @@
       "RelativeMoniker": "D:0:0:{73501A53-B138-4A54-AA93-F571D25EE738}|OTI_2024\\OTI_2024.csproj|solutionrelative:oti_2024\\miscare.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{73501A53-B138-4A54-AA93-F571D25EE738}|OTI_2024\\OTI_2024.csproj|d:\\c-start\\oti_2024\\oti_2024\\joc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{73501A53-B138-4A54-AA93-F571D25EE738}|OTI_2024\\OTI_2024.csproj|D:\\C-Start\\OTI_2024\\oti_2024\\joc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{73501A53-B138-4A54-AA93-F571D25EE738}|OTI_2024\\OTI_2024.csproj|solutionrelative:oti_2024\\joc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -62,22 +62,6 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Joc.cs [Design]",
-              "DocumentMoniker": "D:\\C-Start\\OTI_2024\\OTI_2024\\Joc.cs",
-              "RelativeDocumentMoniker": "OTI_2024\\Joc.cs",
-              "ToolTip": "D:\\C-Start\\OTI_2024\\OTI_2024\\Joc.cs [Design]",
-              "RelativeToolTip": "OTI_2024\\Joc.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-17T10:14:26.356Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Alege op\u021Biunea.cs",
               "DocumentMoniker": "D:\\C-Start\\OTI_2024\\OTI_2024\\Alege op\u021Biunea.cs",
@@ -101,6 +85,21 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-11T07:29:30.641Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Joc.cs [Design]",
+              "DocumentMoniker": "D:\\C-Start\\OTI_2024\\OTI_2024\\Joc.cs",
+              "RelativeDocumentMoniker": "OTI_2024\\Joc.cs",
+              "ToolTip": "D:\\C-Start\\OTI_2024\\OTI_2024\\Joc.cs [Design]",
+              "RelativeToolTip": "OTI_2024\\Joc.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-17T10:14:26.356Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
             },
             {
               "$type": "Document",
