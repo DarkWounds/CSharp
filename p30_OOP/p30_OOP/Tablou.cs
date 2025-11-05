@@ -16,6 +16,14 @@ namespace p30_OOP
         private int[] a;
         private int n; //dimensiunea logica a lui a
         private int N; //dimensiunea fizica a lui a
+
+        //-------------Destructor-------------
+        ~Tablou()
+        {
+            a = null;
+            n = 0; N = 1;
+        }
+
         // ------------ Constructori ------------ 
         public Tablou(int dim)
         {
@@ -160,19 +168,14 @@ namespace p30_OOP
 
         private int Pivot(int st, int dr)
         {
-            int i, j = st , aux, piv = a[st];
-            for(i = st + 1; i <= dr; i++)
+            int i, j = st, piv = a[st];
+            for (i = st + 1; i <= dr; i++)
                 if (a[i] <= piv)
                 {
                     j++;
-                    aux = a[i];
-                    a[i] = a[j];
-                    a[j] = aux;
-
+                    Swap(ref a[i], ref a[j]);
                 }
-            aux = a[st];
-            a[st] = a[j];
-            a[j] = aux;
+            Swap(ref a[st], ref a[j]);
             return j;
         }
 
@@ -188,40 +191,107 @@ namespace p30_OOP
 
         public void Sortare()
         {
-            // QSort(0, n - 1);
-            Array.Sort(a, 0, n);
+            QSort(0, n - 1);
+            //Array.Sort(a, 0, n);
         }
 
         public int CautBin(int x)
         {
-            int st, dr, mijl;
+            int st, dr, mij;
             st = 0; dr = n - 1;
             while (st <= dr)
             {
-                mijl = (st + dr) / 2;
-                if (x == a[mijl]) return mijl;
-                else if (x > a[mijl]) st = mijl + 1;
-                else dr = mijl - 1;
+                mij = (st + dr) / 2;
+                if (x == a[mij]) return mij;
+                if (x < a[mij]) dr = mij - 1;
+                else st = mij + 1;
             }
             return -1;
+        }
+
+        public void PushFront(int x)
+        {
+            Inserare(0, x);
+        }
+
+        // Adauga pe x la finalul vectorului a
+        public void PushBack(int x)
+        {
+            if (n == N)
+            {
+                int[] b = new int[n];
+                for (int i = 0; i < n; i++)
+                    b[i] = a[i];
+                a = null;
+                N *= 2;
+                a = new int[N];
+                for (int i = 0; i < n; i++)
+                    a[i] = b[i];
+            }
+            a[n++] = x;
         }
 
         //Adauga pe x la finalul vectorului a
         public void Add(int x)
         {
-            
+            if (n < N)
+            {
+                a[n++] = x;
+                return;
+            }
+            int[] b = new int[n];
+            for (int i = 0; i < n; i++)
+                b[i] = a[i];
+            a = null;
+            N *= 2;
+            a = new int[N];
+            for (int i = 0; i < n; i++)
+                a[i] = b[i];
+            a[n++] = x;
+        }
+
+        public void PopBack()
+        {
+            if (n > 0) n--;
         }
 
         //Insereaza la pozitie p in vector valoarea x
-        public void Insereaza(int p, int x)
+        public void Inserare(int p, int x)
         {
- 
+            if (p < 0 || p > n) return;
+            if (n == N)
+            {
+                int[] b = new int[n];
+                for (int i = 0; i < n; i++)
+                    b[i] = a[i];
+                a = null;
+                N *= 2;
+                a = new int[N];
+                for (int i = 0; i < n; i++)
+                    a[i] = b[i];
+            }
+            // inserarea efectiva
+            for (int i = n - 1; i >= p; i--)
+                a[i + 1] = a[i];
+            a[p] = x;
+            n++;
         }
 
         //Sterge elementul la pozitie p in vector
         public void Stergere(int p)
         {
-            
+            if (p > n || p < n)
+                return;
+            for (int i = p + 1; i < n; i++)
+                a[i - 1] = a[i];
+            n--;
+        }
+
+        public void Swap(ref int x, ref int y)
+        {
+            int aux = x;
+            x = y;
+            y = aux;
         }
     }
 }

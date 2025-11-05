@@ -50,6 +50,17 @@ namespace p30_OOP
             d.Sortare();
             Console.WriteLine(d);
             Console.WriteLine(d.CautBin(7));
+
+            Console.WriteLine("Redimensionare");
+            a.Sortare();
+            for(int i = 30; i <= 40; i++)
+                d.Add(i);
+            Console.WriteLine(d);
+
+            d.Inserare(0, 0);
+            d.Inserare(3, 100);
+
+            Console.WriteLine(d);
         }
     }
 }
