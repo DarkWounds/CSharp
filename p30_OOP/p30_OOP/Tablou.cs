@@ -14,17 +14,22 @@ namespace p30_OOP
     class Tablou
     {
         private int[] a;
-        private int n; //dimensiunea lui a
+        private int n; //dimensiunea logica a lui a
+        private int N; //dimensiunea fizica a lui a
         // ------------ Constructori ------------ 
         public Tablou(int dim)
         {
-            a = new int[dim];
+            N = 1;
+            while (N < dim) N *= 2;
+            a = new int[N];
             n = dim;
         }
         public Tablou(int dim, int val)
         {
             n = dim;
-            a = new int[n];
+            N = 1;
+            while (N < dim) N *= 2;
+            a = new int[N];
             for (int i = 0; i < n; i++)
                 a[i] = val;
         }
@@ -34,7 +39,7 @@ namespace p30_OOP
         {
             if (!File.Exists(fisier))
             {
-                n = 1;
+                N = n = 1;
                 a = new int[n];
                 Console.WriteLine("Fisier inexistent");
                 return;
@@ -43,7 +48,9 @@ namespace p30_OOP
             string linie = fin.ReadLine();
             string[] nr = linie.Split(new char[]{' '}, StringSplitOptions.RemoveEmptyEntries);
             n = nr.Length;
-            a = new int[n];
+            N = 1;
+            while (N < n) N *= 2;
+            a = new int[N];
             for (int i = 0; i < n; i++)
                 a[i] = int.Parse(nr[i]);
             fin.Close();
@@ -52,8 +59,9 @@ namespace p30_OOP
         //Constructor de copiere
         public Tablou(Tablou z)
         {
+            this.N = z.N;
             this.n = z.n;
-            this.a = new int[n];
+            this.a = new int[N];
             for (int i = 0; i < n; i++)
                 a[i] = z.a[i];
         }
@@ -150,9 +158,38 @@ namespace p30_OOP
             return -1;
         }
 
+        private int Pivot(int st, int dr)
+        {
+            int i, j = st , aux, piv = a[st];
+            for(i = st + 1; i <= dr; i++)
+                if (a[i] <= piv)
+                {
+                    j++;
+                    aux = a[i];
+                    a[i] = a[j];
+                    a[j] = aux;
+
+                }
+            aux = a[st];
+            a[st] = a[j];
+            a[j] = aux;
+            return j;
+        }
+
+        public void QSort(int st, int dr)
+        {
+            if (st < dr)
+            {
+                int p = Pivot(st, dr);
+                if (st < p - 1) Pivot(st, p - 1);
+                if (p + 1 < dr) Pivot(p + 1, dr);
+            }
+        }
+
         public void Sortare()
         {
-            Array.Sort(a);
+            // QSort(0, n - 1);
+            Array.Sort(a, 0, n);
         }
 
         public int CautBin(int x)
@@ -167,6 +204,24 @@ namespace p30_OOP
                 else dr = mijl - 1;
             }
             return -1;
+        }
+
+        //Adauga pe x la finalul vectorului a
+        public void Add(int x)
+        {
+            
+        }
+
+        //Insereaza la pozitie p in vector valoarea x
+        public void Insereaza(int p, int x)
+        {
+ 
+        }
+
+        //Sterge elementul la pozitie p in vector
+        public void Stergere(int p)
+        {
+            
         }
     }
 }
