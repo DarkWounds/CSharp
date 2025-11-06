@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OTI_2025.Properties;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,6 +12,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.AxHost;
 using static System.Windows.Forms.LinkLabel;
 
 
@@ -24,6 +26,9 @@ namespace OTI_2025
         Point p2 = new Point(0, 0);
         int zile = 100;
         int[,] a;
+        
+        //Path
+        string pathBase = null;
 
         List<(Point, Point)> pointsPaint = new List<(Point, Point)>();
         public ArrayList distanteInsule = new ArrayList();
@@ -31,15 +36,6 @@ namespace OTI_2025
 
         Locatii pozBarca;
 
-        public void ListaNume(ListBox t)
-        {
-            for (int i = 0; i < nume.Count; i++)
-            {
-                int x = ((Locatii)nume[i]).id;
-                if(x >= 2 && x <= 7)
-                    t.Items.Add(insula[x].nume);
-            }
-        }
 
         struct Locatii
         {
@@ -82,96 +78,11 @@ namespace OTI_2025
             nume = temporar;
         }
 
-        public void MutareBarca(string name)
+        public void GasirePath()
         {
-            for (int i = 0; i < nume.Count; i++)
-            {
-                int p = ((Locatii)nume[i]).id;
-                if (insula[p].nume != name)
-                {
-                    int x = insula[p].x;
-                    int y = insula[p].y;
-                    start.Location = new Point(x, y);
-                }
-
-            }
-        }
-
-        public Bitmap DeseneazaTraseuPeHarta()
-        {
-            // Creează un bitmap nou cu dimensiunile hărții
-            Bitmap bitmap = new Bitmap(900, 600);
-
-            using (Graphics g = Graphics.FromImage(bitmap))
-            {
-                // Desenează harta de fundal
-                g.DrawImage(Properties.Resources.Harta900x600, 0, 0, 900, 600);
-
-                // Desenează liniile verzi ale traseului
-                using (Pen greenPen = new Pen(Color.Green, 3))
-                {
-                    foreach (var line in pointsPaint)
-                    {
-                        g.DrawLine(greenPen, line.Item1, line.Item2);
-                    }
-                }
-
-                // Desenează distanțele
-                using (Brush transparentBrush = new SolidBrush(Color.FromArgb(128, Color.Black)))
-                {
-                    foreach (var d in distanteInsule)
-                    {
-                        int x = ((distante)d).x;
-                        int y = ((distante)d).y;
-                        int dist = ((distante)d).dist;
-                        g.DrawString(dist + " km ", new Font("Arial", 16, FontStyle.Bold), transparentBrush, new PointF(x, y));
-                    }
-                }
-
-                // Desenează numele insulelor
-                using (Brush transparentBrush = new SolidBrush(Color.FromArgb(128, Color.Black)))
-                {
-                    foreach (var d in nume)
-                    {
-                        int x = ((Locatii)d).x;
-                        int y = ((Locatii)d).y;
-                        string numeInsula = insula[((Locatii)d).id].nume;
-                        g.DrawString(numeInsula, new Font("Arial", 16, FontStyle.Bold), transparentBrush, new PointF(x, y));
-                    }
-                }
-
-                // Desenează imaginile insulelor
-                ImgInsule();
-                for (int i = 2; i <= 11; i++)
-                {
-                        Bitmap insulaImg = GetInsulaImage(i);
-                        if (insulaImg != null 
-                        && insula[i].x != pozBarca.x && insula[i].y != pozBarca.y)
-                       {
-                           g.DrawImage(insulaImg, insula[i].x, insula[i].y, 50, 50);
-                       }
-                }
-                g.DrawImage(start.Image, pozBarca.x, pozBarca.y, 50, 50);
-            }
-            return bitmap;
-        }
-
-        public Bitmap GetInsulaImage(int x)
-        {
-            string id = x.ToString();
-            string s = "pictureBox" + id;
-            PictureBox pb = this.Controls.Find(s, true).FirstOrDefault() as PictureBox;
-            Bitmap bitmap = new Bitmap(pb.Image);
-            return bitmap;
-        }
-
-
-        public void SalvareImagine()
-        {
-            //pictureBoxBack.Image.Save("D:\\C-Start\\OJTI_2025_C#_Resurse\\harta_modificata.png");
-            Bitmap bitmap = DeseneazaTraseuPeHarta();
-            string path = @"D:\C-Start\OJTI_2025_C#_Resurse\harta_modificata.png";
-            bitmap.Save(path);
+            pathBase = Directory.GetCurrentDirectory();
+            int p = pathBase.LastIndexOf(@"\bin");
+            pathBase = pathBase.Substring(0, p) + @"\Resources\";
         }
 
         public void PictureBoxBack_Paint(object sender, PaintEventArgs e)
@@ -218,22 +129,12 @@ namespace OTI_2025
             InitializareTotala(exploratori);
             this.KeyPreview = true;
             this.KeyDown += Expeditie_KeyDown;
+            this.FormClosing += Expeditie_Closed;
         }
-
         public void Expeditie_Closed(object sender, FormClosingEventArgs e)
         {
 
             Application.Exit();
-        }
-
-        private void Expeditie_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.S)
-            {
-                this.Visible = false;
-                Save saveForm = new Save(this);
-                saveForm.Visible = true;
-            }
         }
 
         public void AllActions(object sender)
@@ -339,33 +240,9 @@ namespace OTI_2025
             else MessageBox.Show("Interzi!");
         }
 
-        public void ImgInsule()
-        {
-            PictureBox[] pBox = { start, pictureBox1, pictureBox2, pictureBox3, pictureBox4, pictureBox5, pictureBox6, pictureBox7, pictureBox8, pictureBox9, pictureBox10, pictureBox11 };
-            foreach (var pb in pBox)
-            {
-                pb.Parent = pictureBoxBack;
-                pb.BackColor = Color.Transparent;
-                pb.Size = new Size(50, 50);
-                pb.SizeMode = PictureBoxSizeMode.StretchImage;
-            }
-
-            start.Image = Properties.Resources.barca1;
-            pictureBox2.Image = Properties.Resources.insula2;
-            pictureBox3.Image = Properties.Resources.insula3;
-            pictureBox4.Image = Properties.Resources.insula4;
-            pictureBox5.Image = Properties.Resources.insula5;
-            pictureBox6.Image = Properties.Resources.insula6;
-            pictureBox7.Image = Properties.Resources.insula7;
-            pictureBox8.Image = Properties.Resources.insula8;
-            pictureBox9.Image = Properties.Resources.insula9;
-            pictureBox10.Image = Properties.Resources.insula10;
-            pictureBox11.Image = Properties.Resources.insula11;
-        }
-
         public void Insule(insule[] ins)
         {
-            string path = @"D:\C-Start\OJTI_2025_C#_Resurse\insule.txt";
+            string path = pathBase + @"insule.txt";
             int i = 1;
             try
             {
@@ -403,7 +280,7 @@ namespace OTI_2025
                 for (int y = 0; y <= i; y++)
                     a[x, y] = 0;
 
-            string path2 = @"D:\C-Start\OJTI_2025_C#_Resurse\distante.txt";
+            string path2 =  pathBase + @"distante.txt";
             try
             {
                 StreamReader insuleInfo2 = new StreamReader(path2);
@@ -444,24 +321,55 @@ namespace OTI_2025
 
         public void InitializareInsule()
         {
-            pictureBox1.Location = new Point(insula[1].x, insula[1].y);
-            pictureBox2.Location = new Point(insula[2].x, insula[2].y);
-            pictureBox3.Location = new Point(insula[3].x, insula[3].y);
-            pictureBox4.Location = new Point(insula[4].x, insula[4].y);
-            pictureBox5.Location = new Point(insula[5].x, insula[5].y);
-            pictureBox6.Location = new Point(insula[6].x, insula[6].y);
-            pictureBox7.Location = new Point(insula[7].x, insula[7].y);
-            pictureBox8.Location = new Point(insula[8].x, insula[8].y);
-            pictureBox9.Location = new Point(insula[9].x, insula[9].y);
-            pictureBox10.Location = new Point(insula[10].x, insula[10].y);
-            pictureBox11.Location = new Point(insula[11].x, insula[11].y);
+            PictureBox[] pBox = { pictureBox1, pictureBox2, pictureBox3, pictureBox4,
+                pictureBox5, pictureBox6, pictureBox7, pictureBox8, pictureBox9, pictureBox10,
+                pictureBox11 };
+            for (int i = 0; i < pBox.Length; i++)
+            {
+                int t = i + 1;
+                string name = "insula" + t;
+                object nameresource = Properties.Resources.ResourceManager.GetObject(name);
+
+                pBox[i].Location = new Point(insula[t].x, insula[t].y);
+                pBox[i].Parent = pictureBoxBack;
+                pBox[i].BackColor = Color.Transparent;
+                pBox[i].Size = new Size(50, 50);
+                pBox[i].SizeMode = PictureBoxSizeMode.StretchImage;
+
+                if (nameresource != null)
+                {
+                    pBox[i].Image = (Image)nameresource;
+                }
+            }
 
             start.Location = new Point(insula[1].x, insula[1].y);
+            start.Parent = pictureBoxBack;
+            start.BackColor = Color.Transparent;
+            start.Size = new Size(50, 50);
+            start.SizeMode = PictureBoxSizeMode.StretchImage;
+            start.BringToFront();
+
+            object barcaResource = Properties.Resources.ResourceManager.GetObject("barca");
+            if (barcaResource != null && barcaResource is Image)
+            {
+                start.Image = (Image)barcaResource;
+            }
+            else
+            {
+                try
+                {
+                    start.Image = Properties.Resources.barca;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Eroare la încărcarea imaginii barca: {ex.Message}");
+                }
+            }
         }
 
         private void pictureBoxBack_Click(object sender, EventArgs e)
         {
-           // pictureBoxBack.Image.Save("D:\\C-Start\\OJTI_2025_C#_Resurse\\harta_modificata.png");
+         
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
@@ -512,6 +420,7 @@ namespace OTI_2025
 
         public void InitializareTotala(int exploratori)
         {
+            GasirePath();
             this.exploratori = exploratori;
             exploratoriInitiali = exploratori;
             listView1.BackColor = TransparencyKey;
@@ -524,7 +433,9 @@ namespace OTI_2025
             listView1.BringToFront();
             Insule(insula);
             InitializareInsule();
-            ImgInsule();
+
+            textBox1.Text = Directory.GetCurrentDirectory();
+            textBox1.BringToFront();
         }
 
         private void pictureBox11_Click(object sender, EventArgs e)

@@ -46,6 +46,7 @@ namespace OTI_2025
             pictureBox11 = new PictureBox();
             pictureBox1 = new PictureBox();
             start = new PictureBox();
+            textBox1 = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBoxBack).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -204,18 +205,27 @@ namespace OTI_2025
             // 
             // start
             // 
+            start.BackColor = Color.Transparent;
             start.Location = new Point(781, 149);
             start.Name = "start";
-            start.Size = new Size(100, 50);
+            start.Size = new Size(50, 50);
             start.TabIndex = 13;
             start.TabStop = false;
             start.Click += Start_Click;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(33, 32);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(100, 23);
+            textBox1.TabIndex = 14;
             // 
             // Expeditie
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(902, 602);
+            Controls.Add(textBox1);
             Controls.Add(start);
             Controls.Add(pictureBox1);
             Controls.Add(pictureBox11);
@@ -247,6 +257,7 @@ namespace OTI_2025
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)start).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -266,5 +277,6 @@ namespace OTI_2025
         private PictureBox pictureBox11;
         private PictureBox pictureBox1;
         private PictureBox start;
+        private TextBox textBox1;
     }
 }

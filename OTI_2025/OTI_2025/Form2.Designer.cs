@@ -42,9 +42,7 @@
             imageList1.ColorDepth = ColorDepth.Depth32Bit;
             imageList1.ImageStream = (ImageListStreamer)resources.GetObject("imageList1.ImageStream");
             imageList1.TransparentColor = Color.Transparent;
-            imageList1.Images.SetKeyName(0, "barca.ico");
-            imageList1.Images.SetKeyName(1, "barca3.png");
-            imageList1.Images.SetKeyName(2, "barca5.png");
+            imageList1.Images.SetKeyName(0, "barca5.png");
             // 
             // limg
             // 
@@ -52,12 +50,13 @@
             limg.BorderStyle = BorderStyle.None;
             limg.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             limg.LargeImageList = imageList1;
-            limg.Location = new Point(12, 36);
+            limg.Location = new Point(12, 23);
             limg.Name = "limg";
             limg.Size = new Size(174, 146);
             limg.TabIndex = 0;
             limg.TabStop = false;
             limg.UseCompatibleStateImageBehavior = false;
+            limg.SelectedIndexChanged += limg_SelectedIndexChanged;
             // 
             // textBox1
             // 

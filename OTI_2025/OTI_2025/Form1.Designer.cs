@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             textBox1 = new TextBox();
             textBox2 = new TextBox();
             tUtilizator = new TextBox();
@@ -84,7 +85,7 @@
             // 
             // Btn1
             // 
-            Btn1.Image = Properties.Resources.barca;
+            Btn1.Image = (Image)resources.GetObject("Btn1.Image");
             Btn1.Location = new Point(12, 35);
             Btn1.Name = "Btn1";
             Btn1.Size = new Size(123, 123);

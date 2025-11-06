@@ -121,8 +121,11 @@
   <data name="insula10" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\insula10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="insula2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\insula2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="insula9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\insula9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="insula11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\insula11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="insula3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\insula3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -136,9 +139,8 @@
   <data name="barca1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\barca1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Harta900x600" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Harta900x600.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-    <comment>Harta</comment>
+  <data name="barcaAI" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\barcaAI.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="insula4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\insula4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -149,16 +151,17 @@
   <data name="insula8" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\insula8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="insula11" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\insula11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="insula2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\insula2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="insula9" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\insula9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Harta900x600" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Harta900x600.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Harta</comment>
   </data>
   <data name="barca" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\barca.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="barcaAI" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\barcaAI.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="barca5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\barca5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

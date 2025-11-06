@@ -60,7 +60,7 @@ namespace OTI_2025
                     string insulaSelectata = lbInsule.SelectedItem.ToString();
                     salvare.SelectareInsulaSalvare(insulaSelectata);
                     salvare.MutareBarca(insulaSelectata);
-                    salvare.SalvareImagine();
+                    salvare.SalvareImagine("harta_modif");
                 }
                 catch 
                 {

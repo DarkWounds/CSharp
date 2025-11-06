@@ -25,7 +25,7 @@ namespace OTI_2025
             this.StartPosition = FormStartPosition.CenterScreen;
             limg.View = View.LargeIcon;
             limg.LargeImageList = imageList1;
-            limg.Items.Add("", 2);
+            limg.Items.Add("", 0);
             textBox1.ReadOnly = true;
             this.FormClosing += Form2_Closed;
         }
@@ -43,7 +43,7 @@ namespace OTI_2025
                 exploratori = value;
                 if (value < 30 || value > 200)
                 {
-                    MessageBox.Show("Numarul de exploratori trebuie sa fie intre 30 si 200!");  
+                    MessageBox.Show("Numarul de exploratori trebuie sa fie intre 30 si 200!");
                     tbExploratori.Text = "";
                     return;
                 }
@@ -80,6 +80,11 @@ namespace OTI_2025
         }
 
         private void Form2_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void limg_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
