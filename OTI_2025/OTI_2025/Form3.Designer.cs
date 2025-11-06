@@ -85,7 +85,7 @@ namespace OTI_2025
             // 
             // listView1
             // 
-            listView1.Location = new Point(748, 12);
+            listView1.Location = new Point(663, 12);
             listView1.Name = "listView1";
             listView1.Size = new Size(142, 120);
             listView1.TabIndex = 1;
