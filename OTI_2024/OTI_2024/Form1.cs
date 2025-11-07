@@ -7,6 +7,12 @@
         public Form1()
         {
             InitializeComponent();
+            this.FormClosing += Form1_FormClosing;
+        }
+
+        public void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
 
         private void RtbEmail_TextChanged(object sender, EventArgs e)

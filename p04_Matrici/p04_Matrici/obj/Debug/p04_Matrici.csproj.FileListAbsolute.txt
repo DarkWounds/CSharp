@@ -1,6 +1,0 @@
-D:\12A\p04_Matrici\p04_Matrici\bin\Debug\p04_Matrici.exe.config
-D:\12A\p04_Matrici\p04_Matrici\bin\Debug\p04_Matrici.exe
-D:\12A\p04_Matrici\p04_Matrici\bin\Debug\p04_Matrici.pdb
-D:\12A\p04_Matrici\p04_Matrici\obj\Debug\p04_Matrici.csprojResolveAssemblyReference.cache
-D:\12A\p04_Matrici\p04_Matrici\obj\Debug\p04_Matrici.exe
-D:\12A\p04_Matrici\p04_Matrici\obj\Debug\p04_Matrici.pdb

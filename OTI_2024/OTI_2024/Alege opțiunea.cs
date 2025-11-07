@@ -15,6 +15,12 @@ namespace OTI_2024
         public Alege_opțiunea()
         {
             InitializeComponent();
+            //this.FormClosing += Alege_opțiunea_FormClosing;
+        }
+
+        public void Alege_opțiunea_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
 
         private void BtnStart_Click(object sender, EventArgs e)

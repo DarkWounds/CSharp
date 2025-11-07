@@ -17,3 +17,5 @@ D:\C-Start\OTI_2024\OTI_2024\obj\Debug\net8.0-windows\OTI_2024.pdb
 D:\C-Start\OTI_2024\OTI_2024\obj\Debug\net8.0-windows\OTI_2024.genruntimeconfig.cache
 D:\C-Start\OTI_2024\OTI_2024\obj\Debug\net8.0-windows\ref\OTI_2024.dll
 D:\C-Start\OTI_2024\OTI_2024\obj\Debug\net8.0-windows\OTI_2024.Alege_opțiunea.resources
+D:\C-Start\OTI_2024\OTI_2024\obj\Debug\net8.0-windows\OTI_2024.Joc.resources
+D:\C-Start\OTI_2024\OTI_2024\obj\Debug\net8.0-windows\OTI_2024.Miscare.resources

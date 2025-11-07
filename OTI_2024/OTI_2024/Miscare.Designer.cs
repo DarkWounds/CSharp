@@ -29,38 +29,64 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Miscare));
-            pictureBox1 = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            pbSoare = new PictureBox();
+            btnStart = new Button();
+            btnStop = new Button();
+            ((System.ComponentModel.ISupportInitialize)pbSoare).BeginInit();
             SuspendLayout();
             // 
-            // pictureBox1
+            // pbSoare
             // 
-            pictureBox1.BackColor = Color.Transparent;
-            pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
-            pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox1.Location = new Point(365, 170);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(99, 97);
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
+            pbSoare.BackColor = Color.Transparent;
+            pbSoare.BackgroundImage = (Image)resources.GetObject("pbSoare.BackgroundImage");
+            pbSoare.BackgroundImageLayout = ImageLayout.Stretch;
+            pbSoare.ErrorImage = null;
+            pbSoare.Location = new Point(374, 315);
+            pbSoare.Name = "pbSoare";
+            pbSoare.Size = new Size(50, 50);
+            pbSoare.TabIndex = 0;
+            pbSoare.TabStop = false;
+            // 
+            // btnStart
+            // 
+            btnStart.Location = new Point(969, 103);
+            btnStart.Name = "btnStart";
+            btnStart.Size = new Size(216, 90);
+            btnStart.TabIndex = 2;
+            btnStart.Text = "Start";
+            btnStart.UseVisualStyleBackColor = true;
+            // 
+            // btnStop
+            // 
+            btnStop.Location = new Point(969, 275);
+            btnStop.Name = "btnStop";
+            btnStop.Size = new Size(216, 90);
+            btnStop.TabIndex = 3;
+            btnStop.Text = "Stop";
+            btnStop.UseVisualStyleBackColor = true;
             // 
             // Miscare
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = Properties.Resources.Back3;
+            BackgroundImage = Properties.Resources.Back1;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(804, 451);
-            Controls.Add(pictureBox1);
+            ClientSize = new Size(1319, 687);
+            Controls.Add(btnStop);
+            Controls.Add(btnStart);
+            Controls.Add(pbSoare);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Miscare";
             Text = "Miscare";
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            Load += Miscare_Load;
+            ((System.ComponentModel.ISupportInitialize)pbSoare).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private PictureBox pictureBox1;
+        private PictureBox pbSoare;
+        private Button btnStart;
+        private Button btnStop;
     }
 }
