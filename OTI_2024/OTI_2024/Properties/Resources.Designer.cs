@@ -123,6 +123,16 @@ namespace OTI_2024.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Pamant {
+            get {
+                object obj = ResourceManager.GetObject("Pamant", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap sistem_solar {
             get {
                 object obj = ResourceManager.GetObject("sistem_solar", resourceCulture);

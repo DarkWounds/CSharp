@@ -28,11 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Miscare));
             pbSoare = new PictureBox();
             btnStart = new Button();
             btnStop = new Button();
+            animationTimer = new System.Windows.Forms.Timer(components);
+            pbPamant = new PictureBox();
+            timerVerif = new System.Windows.Forms.Timer(components);
             ((System.ComponentModel.ISupportInitialize)pbSoare).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbPamant).BeginInit();
             SuspendLayout();
             // 
             // pbSoare
@@ -55,6 +60,7 @@
             btnStart.TabIndex = 2;
             btnStart.Text = "Start";
             btnStart.UseVisualStyleBackColor = true;
+            btnStart.Click += btnStart_Click;
             // 
             // btnStop
             // 
@@ -64,6 +70,22 @@
             btnStop.TabIndex = 3;
             btnStop.Text = "Stop";
             btnStop.UseVisualStyleBackColor = true;
+            btnStop.Click += btnStop_Click;
+            // 
+            // animationTimer
+            // 
+            animationTimer.Tick += timer1_Tick;
+            // 
+            // pbPamant
+            // 
+            pbPamant.BackColor = Color.Transparent;
+            pbPamant.BackgroundImage = Properties.Resources.Pamant;
+            pbPamant.BackgroundImageLayout = ImageLayout.Stretch;
+            pbPamant.Location = new Point(494, 176);
+            pbPamant.Name = "pbPamant";
+            pbPamant.Size = new Size(50, 50);
+            pbPamant.TabIndex = 4;
+            pbPamant.TabStop = false;
             // 
             // Miscare
             // 
@@ -72,6 +94,7 @@
             BackgroundImage = Properties.Resources.Back1;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1319, 687);
+            Controls.Add(pbPamant);
             Controls.Add(btnStop);
             Controls.Add(btnStart);
             Controls.Add(pbSoare);
@@ -80,6 +103,7 @@
             Text = "Miscare";
             Load += Miscare_Load;
             ((System.ComponentModel.ISupportInitialize)pbSoare).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbPamant).EndInit();
             ResumeLayout(false);
         }
 
@@ -88,5 +112,8 @@
         private PictureBox pbSoare;
         private Button btnStart;
         private Button btnStop;
+        private System.Windows.Forms.Timer animationTimer;
+        private PictureBox pbPamant;
+        private System.Windows.Forms.Timer timerVerif;
     }
 }
