@@ -42,6 +42,9 @@
             timerLansare = new System.Windows.Forms.Timer(components);
             timerInamici = new System.Windows.Forms.Timer(components);
             timerViata = new System.Windows.Forms.Timer(components);
+            tMiscareInamici = new System.Windows.Forms.Timer(components);
+            timerMiscareNaveta = new System.Windows.Forms.Timer(components);
+            tIntersectare = new System.Windows.Forms.Timer(components);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbBack).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbNava).BeginInit();
@@ -75,6 +78,7 @@
             btnPauza.Size = new Size(100, 100);
             btnPauza.TabIndex = 2;
             btnPauza.UseVisualStyleBackColor = false;
+            btnPauza.Click += btnPauza_Click;
             // 
             // btnStop
             // 
@@ -86,6 +90,7 @@
             btnStop.Size = new Size(100, 100);
             btnStop.TabIndex = 3;
             btnStop.UseVisualStyleBackColor = false;
+            btnStop.Click += btnStop_Click;
             // 
             // btnStart
             // 
@@ -154,7 +159,7 @@
             pbNava.BackColor = Color.Black;
             pbNava.BackgroundImage = Properties.Resources.navaStop;
             pbNava.BackgroundImageLayout = ImageLayout.Stretch;
-            pbNava.Location = new Point(53, 275);
+            pbNava.Location = new Point(54, 284);
             pbNava.Name = "pbNava";
             pbNava.Size = new Size(68, 50);
             pbNava.TabIndex = 9;
@@ -201,5 +206,8 @@
         private System.Windows.Forms.Timer timerLansare;
         private System.Windows.Forms.Timer timerInamici;
         private System.Windows.Forms.Timer timerViata;
+        private System.Windows.Forms.Timer tMiscareInamici;
+        private System.Windows.Forms.Timer timerMiscareNaveta;
+        private System.Windows.Forms.Timer tIntersectare;
     }
 }
