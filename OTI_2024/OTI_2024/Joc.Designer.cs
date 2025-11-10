@@ -39,12 +39,13 @@
             tbVieti = new TextBox();
             tbScor = new TextBox();
             pbNava = new PictureBox();
-            timerLansare = new System.Windows.Forms.Timer(components);
             timerInamici = new System.Windows.Forms.Timer(components);
             timerViata = new System.Windows.Forms.Timer(components);
             tMiscareInamici = new System.Windows.Forms.Timer(components);
             timerMiscareNaveta = new System.Windows.Forms.Timer(components);
             tIntersectare = new System.Windows.Forms.Timer(components);
+            timerAsteroizi = new System.Windows.Forms.Timer(components);
+            timerAnimatii = new System.Windows.Forms.Timer(components);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbBack).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbNava).BeginInit();
@@ -159,9 +160,9 @@
             pbNava.BackColor = Color.Black;
             pbNava.BackgroundImage = Properties.Resources.navaStop;
             pbNava.BackgroundImageLayout = ImageLayout.Stretch;
-            pbNava.Location = new Point(54, 284);
+            pbNava.Location = new Point(50, 296);
             pbNava.Name = "pbNava";
-            pbNava.Size = new Size(68, 50);
+            pbNava.Size = new Size(70, 50);
             pbNava.TabIndex = 9;
             pbNava.TabStop = false;
             // 
@@ -203,11 +204,12 @@
         private TextBox tbVieti;
         private TextBox tbScor;
         private PictureBox pbNava;
-        private System.Windows.Forms.Timer timerLansare;
         private System.Windows.Forms.Timer timerInamici;
         private System.Windows.Forms.Timer timerViata;
         private System.Windows.Forms.Timer tMiscareInamici;
         private System.Windows.Forms.Timer timerMiscareNaveta;
         private System.Windows.Forms.Timer tIntersectare;
+        private System.Windows.Forms.Timer timerAsteroizi;
+        private System.Windows.Forms.Timer timerAnimatii;
     }
 }

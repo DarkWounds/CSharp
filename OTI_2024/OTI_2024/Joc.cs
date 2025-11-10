@@ -7,46 +7,127 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
+using Microsoft.VisualBasic;
+using System.IO;
+using NAudio.Wave;
 
 namespace OTI_2024
 {
     public partial class Joc : Form
     {
         int pornit = 0;
+        int miscare = 0;
         Image imgStart = null;
         Image imgStop = null;
         Image imgPauza = null;
+        string pathbaza = null;
+        Keys last = Keys.None;
 
         List<PictureBox> inamici = new List<PictureBox>();
         List<PictureBox> naveta = new List<PictureBox>();
 
+        List<AudioFileReader> sunete = new List<AudioFileReader>();
+        WaveOutEvent outputDevice = new WaveOutEvent();
+
+        Image imgNavaStop, imgNavaUp, imgNavaDown, imgNavaMove, imgNavaFire;
+
         public Joc()
         {
             InitializeComponent();
+            FindPath();
+            sunete.Add(new AudioFileReader(pathbaza + "sunetFundal.mp3"));
+            sunete.Add(new AudioFileReader(pathbaza + "Temperatura.mp3"));
+            outputDevice.Volume = 0.5f;
+            outputDevice.Init(sunete[0]);
             KeyDown += Joc_KeyDown;
+            KeyUp += Joc_KeyUp; 
             this.KeyPreview = true;
             this.FormClosing += Joc_FormClosing;
+            pbNava.SizeMode = PictureBoxSizeMode.StretchImage;
 
-            imgStart = GrayScaleImg(Image.FromFile("D:\\C-Start\\OJTI_2024_C#_Resurse\\Start.png"));
-            imgStop = GrayScaleImg(Image.FromFile("D:\\C-Start\\OJTI_2024_C#_Resurse\\Stop.png"));
-            imgPauza = GrayScaleImg(Image.FromFile("D:\\C-Start\\OJTI_2024_C#_Resurse\\Pauza.png"));
+            imgNavaStop = Image.FromFile(pathbaza + "navaStop.png");
+            imgNavaUp = Image.FromFile(pathbaza + "navaUp.png");
+            imgNavaDown = Image.FromFile(pathbaza + "navaDown.png");
+            imgNavaMove = Image.FromFile(pathbaza + "navaMove.png");
+            imgNavaFire = Image.FromFile(pathbaza + "navaFire.png");
+            pbNava.Image = imgNavaStop;
+            
+            imgStart = GrayScaleImg(Image.FromFile(pathbaza + "Start.png"));
+            imgStop = GrayScaleImg(Image.FromFile(pathbaza + "Stop.png"));
+            imgPauza = GrayScaleImg(Image.FromFile(pathbaza + "Pauza.png"));
             btnPauza.Image = imgPauza;
             btnStop.Image = imgStop;
+            InitTimere(0);
+        }
 
-            timerLansare.Interval = 500; 
-            timerLansare.Tick += TimerLansare_Tick;
-
+        private void InitTimere(int i)
+        {
+            timerAsteroizi.Interval = 1000;
             timerMiscareNaveta.Interval = 16;
-            timerMiscareNaveta.Tick += TimerMiscareNaveta_Tick;
-
             timerInamici.Interval = 2000;
-            timerInamici.Tick += TimerInamici_Tick;
-
             tMiscareInamici.Interval = 30;
-            tMiscareInamici.Tick += TimerMiscare_Tick;
-
             tIntersectare.Interval = 1;
-            tIntersectare.Tick += TIntersectare_Tick;
+            timerViata.Interval = 7000;
+
+            if (i != 0)
+            {
+                timerViata.Tick += TimerViata_Tick;
+                timerAsteroizi.Tick += TimerAsteroizi_Tick;
+                timerMiscareNaveta.Tick += TimerMiscareNaveta_Tick;
+                timerInamici.Tick += TimerInamici_Tick;
+                tMiscareInamici.Tick += TimerMiscare_Tick;
+                tIntersectare.Tick += TIntersectare_Tick;
+
+                timerViata.Start();
+                timerAsteroizi.Start();
+                tIntersectare.Start();
+                timerMiscareNaveta.Start();
+                timerInamici.Start();
+                tMiscareInamici.Start();
+            }
+            else
+            {
+                timerViata.Tick -= TimerViata_Tick;
+                timerAsteroizi.Tick -= TimerAsteroizi_Tick;
+                timerMiscareNaveta.Tick -= TimerMiscareNaveta_Tick;
+                timerInamici.Tick -= TimerInamici_Tick;
+                tMiscareInamici.Tick -= TimerMiscare_Tick;
+                tIntersectare.Tick -= TIntersectare_Tick;
+
+                timerViata.Stop();
+                timerAsteroizi.Stop();
+                tIntersectare.Stop();
+                timerMiscareNaveta.Stop();
+                timerInamici.Stop();
+                tMiscareInamici.Stop();
+            }
+        }
+
+        private void FindPath()
+        {
+            string s = Directory.GetCurrentDirectory();
+            pathbaza = s + "\\Resurse\\";
+        }
+
+        private void TimerViata_Tick(object? sender, EventArgs e)
+        {
+            Size s = new Size(50, 20);
+            Point p = new Point(0, 0);
+            if (pornit == 1)
+            {
+                InitAll(Image.FromFile(pathbaza + "viata.gif"), s, 1, p);
+            }
+        }
+
+        private void TimerAsteroizi_Tick(object? sender, EventArgs e)
+        {
+            Size s = new Size(10, 10);
+            Point p = new Point(0, 0);
+            if (pornit == 1)
+            {
+                InitAll(Image.FromFile(pathbaza + "asteroid.png"), s, 1, p);
+            }
         }
 
         private void TIntersectare_Tick(object? sender, EventArgs e)
@@ -81,11 +162,11 @@ namespace OTI_2024
 
         private void TimerInamici_Tick(object? sender, EventArgs e)
         {
-            Size s = new Size(130, 50);
+            Size s = new Size(90, 30);
             Point p = new Point(0, 0);
             if (pornit == 1)
             {
-                InitAll(Image.FromFile("D:\\C-Start\\OJTI_2024_C#_Resurse\\Inamic.gif"), s, 1, p);
+                InitAll(Image.FromFile(pathbaza + "Inamic.gif"), s, 1, p);
             }
         }
 
@@ -97,34 +178,24 @@ namespace OTI_2024
                 else p.Dispose();
         }
 
-        private void TimerLansare_Tick(object? sender, EventArgs e)
-        {
-            Size s = new Size(50, 50);
-            if (pornit == 1)
-            {
-                Point p1 = new Point(0, 0);
-                Point p2 = new Point(pbNava.Location.X - pbNava.Width/2, pbNava.Location.Y - pbNava.Height/2);
-                InitAll(Image.FromFile("D:\\C-Start\\OJTI_2024_C#_Resurse\\rachetaNava.png"), s, 0, p2);
-                InitAll(Image.FromFile("D:\\C-Start\\OJTI_2024_C#_Resurse\\asteroid.png"), s, 1, p1);
-            } 
-        }
-
         private void InitAll(Image img, Size s, int i, Point pozNava)
         {
             PictureBox p = new PictureBox();
+            int[] poz = { 0, 107, 147, 187, 227, 267, 307, 347, 387, 427, 467 };
             p.Image = img;
             p.Size = s;
             p.BackgroundImageLayout = ImageLayout.Stretch;
             p.SizeMode = PictureBoxSizeMode.StretchImage;
-            int randX = new Random().Next(1, 9);
-            int baza = 25;
+            int randX = new Random().Next(1, 10);
+            int baza = 22;
             int x = 845;
             if(pozNava.X != 0 && pozNava.Y != 0)
-                p.Location = new Point(pozNava.X, pozNava.Y);
-            else p.Location = new Point(x, baza + randX * 40);
+                p.Location = new Point(pozNava.X + 23, pozNava.Y + 44);
+            else p.Location = new Point(x, poz[randX]);
             this.Controls.Add(p);
             p.BackColor = Color.Black;
             p.BringToFront();
+            pbNava.BringToFront();
             if (i == 1) inamici.Add(p);
             else naveta.Add(p);
         }
@@ -152,7 +223,7 @@ namespace OTI_2024
             return (Image)bmp;
         }
 
-        private void Joc_FormClosing(object sender, FormClosingEventArgs e)
+        private void Joc_FormClosing(object? sender, FormClosingEventArgs e)
         {
             Application.Exit();
         }
@@ -161,66 +232,107 @@ namespace OTI_2024
         {
             if (pornit == 1)
             {
-                if (e.KeyCode == Keys.W && pbNava.Location.Y - pbNava.Height / 2 >= 88)
+                if(e.KeyCode == Keys.Space)
                 {
-                    pbNava.Top -= (pbNava.Height / 2);
+                    last = Keys.Space;
+                    pbNava.Image = imgNavaFire;
+                    Size s = new Size(10, 10);
+                    if (pornit == 1)
+                    {
+                        Point p = new Point(pbNava.Location.X - pbNava.Width / 2, pbNava.Location.Y - pbNava.Height / 2);
+                        InitAll(Image.FromFile(pathbaza + "rachetaNava.png"), s, 0, p);
+                    }
                 }
-                if (e.KeyCode == Keys.S && pbNava.Location.Y + pbNava.Height / 2 <= 530)
+                if (e.KeyCode == Keys.W && pbNava.Location.Y - 20 >= 85)
                 {
-                    pbNava.Top += (pbNava.Height / 2);
+                    last = Keys.W;
+                    pbNava.Image = imgNavaUp;
+                    pbNava.Top -= 20;
                 }
-                if (e.KeyCode == Keys.A && pbNava.Location.X - pbNava.Width >= 43)
+                else if (e.KeyCode == Keys.S && pbNava.Location.Y + 20 <= 500)
                 {
-                    pbNava.Left -= pbNava.Width;
+                    last = Keys.S;
+                    pbNava.Image = imgNavaDown;
+                    pbNava.Top += 20;
                 }
-                if (e.KeyCode == Keys.D && pbNava.Location.X + pbNava.Width <= 775)
+                else if (e.KeyCode == Keys.A && pbNava.Location.X - 20 >= 43)
                 {
-                    pbNava.Left += pbNava.Width;
+                    last = Keys.A;
+                    pbNava.Image = imgNavaMove;
+                    pbNava.Left -= 20;
                 }
+                else if (e.KeyCode == Keys.D && pbNava.Location.X + 20 <= 775)
+                {
+                    last = Keys.D;
+                    pbNava.Image = imgNavaMove;
+                    pbNava.Left += 20;
+                }
+            }
+            pbNava.Refresh();
+        }
+
+        private void Joc_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == last)
+            {
+                last = Keys.None;
+                pbNava.Image = imgNavaStop;
             }
         }
 
         private void btnStart_Click(object sender, EventArgs e)
         {
-            pornit = 1;
-            btnStart.Image = imgStart;
-            btnPauza.Image = Image.FromFile("D:\\C-Start\\OJTI_2024_C#_Resurse\\Pauza.png");
-            btnStop.Image = Image.FromFile("D:\\C-Start\\OJTI_2024_C#_Resurse\\Stop.png");
-            
-            tIntersectare.Start();
-            timerMiscareNaveta.Start();
-            timerLansare.Start();
-            timerInamici.Start();
-            tMiscareInamici.Start();
+            if (pornit != 1)
+            { 
+                outputDevice.Play();
+                pornit = 1;
+                btnStart.Image = imgStart;
+                btnPauza.Image = Image.FromFile(pathbaza + "Pauza.png");
+                btnStop.Image = Image.FromFile(pathbaza + "Stop.png");
+                InitTimere(1);
+            }
         }
 
         private void btnPauza_Click(object sender, EventArgs e)
         {
-            btnPauza.Image = imgPauza;
-            btnStop.Image = imgStop;
-            btnStart.Image = Image.FromFile("D:\\C-Start\\OJTI_2024_C#_Resurse\\Start.png");
-            pornit = 0;
-
-            tIntersectare.Stop();
-            timerMiscareNaveta.Stop();
-            timerLansare.Stop();
-            timerInamici.Stop();
-            tMiscareInamici.Stop();
+            if (pornit == 1)
+            { 
+                outputDevice.Pause();
+                btnPauza.Image = imgPauza;
+                btnStop.Image = imgStop;
+                btnStart.Image = Image.FromFile(pathbaza + "Start.png");
+                InitTimere(0);
+                pornit = 0;
+                last = Keys.None;
+                pbNava.Image = imgNavaStop;
+            }
         }
 
         private void btnStop_Click(object sender, EventArgs e)
         {
-            btnStop.Image = imgStop;
-            btnStart.Image = Image.FromFile("D:\\C-Start\\OJTI_2024_C#_Resurse\\Start.png");
-            pornit = 0;
-
-            tIntersectare.Stop();
-            timerMiscareNaveta.Stop();
-            timerLansare.Stop();
-            timerInamici.Stop();
-            tMiscareInamici.Stop();
-            inamici.Clear();
-            naveta.Clear();
+            if (pornit == 1)
+            { 
+                btnStop.Image = imgStop;
+                btnStart.Image = Image.FromFile(pathbaza + "Start.png");
+                InitTimere(0);
+                tbScor.Text = 0 + "";
+                tbVieti.Text = 3 + "";
+                foreach (var p in inamici)
+                    p.Dispose();
+                foreach (var p in naveta)
+                    p.Dispose();
+                inamici.Clear();
+                naveta.Clear();
+                pbNava.Location = new Point(50, 296);
+                pbNava.Image = imgNavaStop;
+                last = Keys.None;
+                pornit = 2;
+                outputDevice.Stop();
+                outputDevice.Dispose();
+                outputDevice = new WaveOutEvent();
+                outputDevice.Volume = 0.5f;
+                outputDevice.Init(sunete[0]);
+            }
         }
     }
 }
