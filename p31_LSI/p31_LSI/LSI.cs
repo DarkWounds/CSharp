@@ -48,7 +48,7 @@ namespace p31_LSI
         public void Add(Nod p, int val) 
         {
             Nod q = new Nod(val);
-            q = p.leg;
+            q.leg = p.leg;
             p.leg = q;
             n++;
         }
@@ -97,12 +97,31 @@ namespace p31_LSI
         {
             if (!File.Exists(fisInput))
             {
-                Console.WriteLine("Nu exista fisierul!");
+                Console.WriteLine("Fisier inexistent!");
                 return;
             }
             head = null;
             n = 0;
-            
+            Nod last = null;
+            StreamReader fin = new StreamReader(fisInput);
+            string linie;
+            while ((linie = fin.ReadLine()) != null)
+            {
+                string[] nr = linie.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+                foreach (string e in nr)
+                {
+                    if (n == 0)
+                    {
+                        Add(int.Parse(e));
+                        last = head;
+                    }
+                    else
+                    {
+                        Add(last, Convert.ToInt32(e));
+                        last = last.leg;
+                    }
+                }
+            }
         }
 
         //Destructori
@@ -111,7 +130,7 @@ namespace p31_LSI
             head = null;
             n = 0;
         }
-
+       
         //-------------------Sectiunea Proprietati-------------------
 
         public int Count
@@ -120,6 +139,28 @@ namespace p31_LSI
         }
 
         //-------------------Sectiunea Indexatori--------------------
+
+        public int this[int i]
+        {
+            get
+            {
+                if (i < 1 || i > n) return Int32.MinValue;
+                if (i == 1) return head.info;
+                //Al i-lea carcater
+                Nod p;
+                for (p = head; i > 1; p = p.leg)
+                    i--;
+                return p.info;
+            }
+            set
+            {
+                Nod p;
+                //Al i-lea carcater
+                for (p = head; i > 1; p = p.leg)
+                    i--;
+                p.info = value;
+            }
+        }
 
         //-------------------Afisarea Listei-------------------------
 

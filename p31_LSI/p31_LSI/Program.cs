@@ -14,6 +14,17 @@ namespace p31_LSI
             for (int i = 16; i >= 1; i--)
                 l.Add(i * i);
             Console.WriteLine(l);
+
+            LSI q = new LSI("numere.txt");
+            Console.WriteLine(q);
+
+            for (int i = 1; i <= q.Count; i++)
+                Console.Write(q[i] + " ");
+            Console.WriteLine();
+
+            q[4] = 5556666;
+            Console.WriteLine(q);
+
         }
     }
 }
