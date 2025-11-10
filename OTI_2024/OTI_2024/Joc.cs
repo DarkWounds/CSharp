@@ -17,7 +17,6 @@ namespace OTI_2024
     public partial class Joc : Form
     {
         int pornit = 0;
-        int miscare = 0;
         Image imgStart = null;
         Image imgStop = null;
         Image imgPauza = null;
