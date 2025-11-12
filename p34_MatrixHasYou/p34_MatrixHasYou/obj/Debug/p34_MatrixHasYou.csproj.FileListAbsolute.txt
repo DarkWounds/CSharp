@@ -1,0 +1,6 @@
+D:\12A\p34_MatrixHasYou\p34_MatrixHasYou\bin\Debug\p34_MatrixHasYou.exe.config
+D:\12A\p34_MatrixHasYou\p34_MatrixHasYou\bin\Debug\p34_MatrixHasYou.exe
+D:\12A\p34_MatrixHasYou\p34_MatrixHasYou\bin\Debug\p34_MatrixHasYou.pdb
+D:\12A\p34_MatrixHasYou\p34_MatrixHasYou\obj\Debug\p34_MatrixHasYou.csprojResolveAssemblyReference.cache
+D:\12A\p34_MatrixHasYou\p34_MatrixHasYou\obj\Debug\p34_MatrixHasYou.exe
+D:\12A\p34_MatrixHasYou\p34_MatrixHasYou\obj\Debug\p34_MatrixHasYou.pdb
