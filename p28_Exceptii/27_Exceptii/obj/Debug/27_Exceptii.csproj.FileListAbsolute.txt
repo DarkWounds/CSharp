@@ -1,0 +1,8 @@
+D:\12A\27_Exceptii\27_Exceptii\bin\Debug\27_Exceptii.exe.config
+D:\12A\27_Exceptii\27_Exceptii\bin\Debug\27_Exceptii.exe
+D:\12A\27_Exceptii\27_Exceptii\bin\Debug\27_Exceptii.pdb
+D:\12A\27_Exceptii\27_Exceptii\obj\Debug\27_Exceptii.exe
+D:\12A\27_Exceptii\27_Exceptii\obj\Debug\27_Exceptii.pdb
+D:\12A\p28_Exceptii\27_Exceptii\bin\Debug\27_Exceptii.exe.config
+D:\12A\p28_Exceptii\27_Exceptii\obj\Debug\27_Exceptii.exe
+D:\12A\p28_Exceptii\27_Exceptii\obj\Debug\27_Exceptii.pdb
