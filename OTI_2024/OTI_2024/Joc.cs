@@ -140,6 +140,16 @@ namespace OTI_2024
                     {
                         pb.Add(naveta[i]);
                         pb.Add(inamici[j]);
+                        tbScor.Text = (int.Parse(tbScor.Text) + 1) + "";
+                    }
+                    if (pbNava.Bounds.IntersectsWith(inamici[j].Bounds))
+                    {
+                        pb.Add(inamici[j]);
+                        tbVieti.Text = (int.Parse(tbVieti.Text) - 1) + "";
+                        if (int.Parse(tbVieti.Text) == 0)
+                        {
+                            
+                        }
                     }
                 }
             }
@@ -310,7 +320,9 @@ namespace OTI_2024
         private void btnStop_Click(object sender, EventArgs e)
         {
             if (pornit == 1)
-            { 
+            {
+                //MessageBox.Show();
+                /*
                 btnStop.Image = imgStop;
                 btnStart.Image = Image.FromFile(pathbaza + "Start.png");
                 InitTimere(0);
@@ -330,7 +342,7 @@ namespace OTI_2024
                 outputDevice.Dispose();
                 outputDevice = new WaveOutEvent();
                 outputDevice.Volume = 0.5f;
-                outputDevice.Init(sunete[0]);
+                outputDevice.Init(sunete[0]);*/
             }
         }
     }

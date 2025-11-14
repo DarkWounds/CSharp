@@ -30,8 +30,8 @@
               "Title": "Joc.cs [Design]",
               "DocumentMoniker": "D:\\C-Start\\OTI_2024\\OTI_2024\\Joc.cs",
               "RelativeDocumentMoniker": "OTI_2024\\Joc.cs",
-              "ToolTip": "D:\\C-Start\\OTI_2024\\OTI_2024\\Joc.cs [Design]*",
-              "RelativeToolTip": "OTI_2024\\Joc.cs [Design]*",
+              "ToolTip": "D:\\C-Start\\OTI_2024\\OTI_2024\\Joc.cs [Design]",
+              "RelativeToolTip": "OTI_2024\\Joc.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-09T18:21:15.445Z",
               "IsPinned": true,
@@ -43,9 +43,9 @@
               "Title": "Joc.cs",
               "DocumentMoniker": "D:\\C-Start\\OTI_2024\\OTI_2024\\Joc.cs",
               "RelativeDocumentMoniker": "OTI_2024\\Joc.cs",
-              "ToolTip": "D:\\C-Start\\OTI_2024\\OTI_2024\\Joc.cs*",
-              "RelativeToolTip": "OTI_2024\\Joc.cs*",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABIAAAAXAAAAAAAAAA==",
+              "ToolTip": "D:\\C-Start\\OTI_2024\\OTI_2024\\Joc.cs",
+              "RelativeToolTip": "OTI_2024\\Joc.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABIAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-09T17:58:24.136Z",
               "IsPinned": true,
@@ -84,8 +84,7 @@
               "ToolTip": "D:\\C-Start\\OTI_2024\\OTI_2024\\Miscare.cs [Design]",
               "RelativeToolTip": "OTI_2024\\Miscare.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-09T21:24:59.931Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-11-09T21:24:59.931Z"
             }
           ]
         }
