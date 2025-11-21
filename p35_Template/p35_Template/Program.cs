@@ -11,6 +11,8 @@ namespace p35_Template
         static void Main(string[] args)
         {
             Stiva<int> st = new Stiva<int>();
+            Stiva<char> w = new Stiva<char>();
+
             int n = 1234;
             while(n > 0)
             {
@@ -26,8 +28,18 @@ namespace p35_Template
             }
             Console.WriteLine();
 
+            //--------------------------------------------------------------
+            n = 1234;
+            while (n > 0)
+            {
+                st.Push(n % 2);
+                n /= 2;
+            }
 
-            Stiva<char> w = new Stiva<char>();
+            // Afisam continutul stivei override ToString()
+            Console.WriteLine(st);
+
+
             for (char c = 'a'; c <= 'z'; c++)
                 w.Push(c);
             while (!w.Empty())
@@ -36,6 +48,14 @@ namespace p35_Template
                 w.Pop();
             }
             Console.WriteLine();
+
+
+            //--------------------------------------------------------------
+            for (char c = 'a'; c <= 'z'; c++)
+                w.Push(c);
+
+            // Afisam continutul stivei override ToString()
+            Console.WriteLine(w);
 
         }
     }

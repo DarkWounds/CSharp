@@ -4,3 +4,10 @@ D:\12A\p35_Template\p35_Template\bin\Debug\p35_Template.pdb
 D:\12A\p35_Template\p35_Template\obj\Debug\p35_Template.csprojResolveAssemblyReference.cache
 D:\12A\p35_Template\p35_Template\obj\Debug\p35_Template.exe
 D:\12A\p35_Template\p35_Template\obj\Debug\p35_Template.pdb
+D:\C-Start\p35_Template\p35_Template\bin\Debug\p35_Template.exe.config
+D:\C-Start\p35_Template\p35_Template\bin\Debug\p35_Template.exe
+D:\C-Start\p35_Template\p35_Template\bin\Debug\p35_Template.pdb
+D:\C-Start\p35_Template\p35_Template\obj\Debug\p35_Template.csproj.AssemblyReference.cache
+D:\C-Start\p35_Template\p35_Template\obj\Debug\p35_Template.csproj.CoreCompileInputs.cache
+D:\C-Start\p35_Template\p35_Template\obj\Debug\p35_Template.exe
+D:\C-Start\p35_Template\p35_Template\obj\Debug\p35_Template.pdb

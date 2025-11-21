@@ -71,5 +71,16 @@ namespace p35_Template
             return (top == null);
         }
 
+        public override string ToString()
+        {
+            string s = "";
+            while (!this.Empty())
+            {
+                s += this.Top() + " ";
+                this.Pop();
+            }
+            return s;
+        }
+
     }
 }
