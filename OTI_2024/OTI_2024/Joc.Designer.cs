@@ -46,6 +46,7 @@
             tIntersectare = new System.Windows.Forms.Timer(components);
             timerAsteroizi = new System.Windows.Forms.Timer(components);
             timerAnimatii = new System.Windows.Forms.Timer(components);
+            vSlide = new NAudio.Gui.VolumeSlider();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbBack).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbNava).BeginInit();
@@ -68,6 +69,7 @@
             pbBack.Size = new Size(800, 500);
             pbBack.TabIndex = 1;
             pbBack.TabStop = false;
+            pbBack.Click += pbBack_Click;
             // 
             // btnPauza
             // 
@@ -166,11 +168,20 @@
             pbNava.TabIndex = 9;
             pbNava.TabStop = false;
             // 
+            // vSlide
+            // 
+            vSlide.Location = new Point(1197, 415);
+            vSlide.Name = "vSlide";
+            vSlide.Size = new Size(96, 24);
+            vSlide.TabIndex = 10;
+            vSlide.Load += vSlide_Load;
+            // 
             // Joc
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1341, 612);
+            Controls.Add(vSlide);
             Controls.Add(pbNava);
             Controls.Add(tbScor);
             Controls.Add(tbVieti);
@@ -211,5 +222,6 @@
         private System.Windows.Forms.Timer tIntersectare;
         private System.Windows.Forms.Timer timerAsteroizi;
         private System.Windows.Forms.Timer timerAnimatii;
+        private NAudio.Gui.VolumeSlider vSlide;
     }
 }

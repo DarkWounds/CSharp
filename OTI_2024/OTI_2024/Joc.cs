@@ -29,21 +29,24 @@ namespace OTI_2024
         List<AudioFileReader> sunete = new List<AudioFileReader>();
         WaveOutEvent outputDevice = new WaveOutEvent();
 
-        Image imgNavaStop, imgNavaUp, imgNavaDown, imgNavaMove, imgNavaFire;
+        Image imgNavaStop, imgNavaUp, imgNavaDown, imgNavaMove, imgNavaFire, imgInamic, imgAsteroid, imgViata;
 
         public Joc()
         {
             InitializeComponent();
             FindPath();
             sunete.Add(new AudioFileReader(pathbaza + "sunetFundal.mp3"));
-            sunete.Add(new AudioFileReader(pathbaza + "Temperatura.mp3"));
-            outputDevice.Volume = 0.5f;
             outputDevice.Init(sunete[0]);
             KeyDown += Joc_KeyDown;
-            KeyUp += Joc_KeyUp; 
+            KeyUp += Joc_KeyUp;
+            outputDevice.Volume = 1f;
             this.KeyPreview = true;
             this.FormClosing += Joc_FormClosing;
             pbNava.SizeMode = PictureBoxSizeMode.StretchImage;
+
+            imgInamic = Image.FromFile(pathbaza + "Inamic.gif");
+            imgViata = Image.FromFile(pathbaza + "viata.gif");
+            imgAsteroid = Image.FromFile(pathbaza + "asteroid.png");
 
             imgNavaStop = Image.FromFile(pathbaza + "navaStop.png");
             imgNavaUp = Image.FromFile(pathbaza + "navaUp.png");
@@ -51,7 +54,7 @@ namespace OTI_2024
             imgNavaMove = Image.FromFile(pathbaza + "navaMove.png");
             imgNavaFire = Image.FromFile(pathbaza + "navaFire.png");
             pbNava.Image = imgNavaStop;
-            
+
             imgStart = GrayScaleImg(Image.FromFile(pathbaza + "Start.png"));
             imgStop = GrayScaleImg(Image.FromFile(pathbaza + "Stop.png"));
             imgPauza = GrayScaleImg(Image.FromFile(pathbaza + "Pauza.png"));
@@ -66,7 +69,7 @@ namespace OTI_2024
             timerMiscareNaveta.Interval = 16;
             timerInamici.Interval = 2000;
             tMiscareInamici.Interval = 30;
-            tIntersectare.Interval = 1;
+            tIntersectare.Interval = 4;
             timerViata.Interval = 7000;
 
             if (i != 0)
@@ -103,6 +106,22 @@ namespace OTI_2024
             }
         }
 
+        private void PlayOnce(string filePath)
+        {
+            var reader = new AudioFileReader(filePath);
+            var player = new WaveOutEvent();
+
+            player.Init(reader);
+
+            player.PlaybackStopped += (s, e) =>
+            {
+                player.Dispose();
+                reader.Dispose();
+            };
+
+            player.Play();
+        }
+
         private void FindPath()
         {
             string s = Directory.GetCurrentDirectory();
@@ -115,7 +134,7 @@ namespace OTI_2024
             Point p = new Point(0, 0);
             if (pornit == 1)
             {
-                InitAll(Image.FromFile(pathbaza + "viata.gif"), s, 1, p);
+                InitAll(imgViata, s, 1, p);
             }
         }
 
@@ -125,41 +144,82 @@ namespace OTI_2024
             Point p = new Point(0, 0);
             if (pornit == 1)
             {
-                InitAll(Image.FromFile(pathbaza + "asteroid.png"), s, 1, p);
+                InitAll(imgAsteroid, s, 1, p);
             }
         }
 
         private void TIntersectare_Tick(object? sender, EventArgs e)
         {
-            List<PictureBox> pb = new List<PictureBox>();
-            for (int i = 0; i < naveta.Count; i++)
+            var inamiciStergere = new HashSet<PictureBox>();
+            var stergereGenerala = new HashSet<PictureBox>();
+
+            // Verificare coliziuni rachete cu inamici
+            for (int i = naveta.Count - 1; i >= 0; i--)
             {
-                for (int j = 0; j < inamici.Count; j++)
+                var rocket = naveta[i];
+                for (int j = inamici.Count - 1; j >= 0; j--)
                 {
-                    if (naveta[i].Bounds.IntersectsWith(inamici[j].Bounds))
+                    var enemy = inamici[j];
+                    if (rocket.Bounds.IntersectsWith(enemy.Bounds))
                     {
-                        pb.Add(naveta[i]);
-                        pb.Add(inamici[j]);
-                        tbScor.Text = (int.Parse(tbScor.Text) + 1) + "";
-                    }
-                    if (pbNava.Bounds.IntersectsWith(inamici[j].Bounds))
-                    {
-                        pb.Add(inamici[j]);
-                        tbVieti.Text = (int.Parse(tbVieti.Text) - 1) + "";
-                        if (int.Parse(tbVieti.Text) == 0)
-                        {
-                            
-                        }
+                        if (enemy.Image == imgInamic)
+                            PlayOnce(pathbaza + "sunetDistrugere.mp3");
+                        stergereGenerala.Add(rocket);
+                        inamiciStergere.Add(enemy);
+                        break;
                     }
                 }
             }
-            foreach (var x in pb)
+
+            // Verificare coliziuni inamici cu nava
+            for (int j = inamici.Count - 1; j >= 0; j--)
             {
-                x.Dispose();
-                naveta.Remove(x);
-                inamici.Remove(x);
+                var enemy = inamici[j];
+                if (pbNava.Bounds.IntersectsWith(enemy.Bounds))
+                {
+                    if (enemy.Image != imgViata)
+                    {
+                        stergereGenerala.Add(enemy);
+                        int vieti = (int.Parse(tbScor.Text) - 1);
+                        if (vieti >= 0)
+                            tbScor.Text = vieti + "";
+                        else
+                        {
+                            outputDevice.Pause();
+                            btnPauza.Image = imgPauza;
+                            btnStop.Image = imgStop;
+                            btnStart.Image = Image.FromFile(pathbaza + "Start.png");
+                            InitTimere(0);
+                            pornit = 0;
+                            last = Keys.None;
+                            pbNava.Image = imgNavaStop;
+                        }
+                    }
+                    else
+                    {
+                        stergereGenerala.Add(enemy);
+                        PlayOnce(pathbaza + "sunetBonus.mp3");
+                        tbScor.Text = (int.Parse(tbScor.Text) + 1) + "";
+                    }
+                }
+            }
+
+            foreach (var p in stergereGenerala)
+            {
+                inamici.Remove(p);
+                this.Controls.Remove(p);
+                p.Dispose();
+            }
+
+            foreach (var p in inamiciStergere)
+            {
+                inamici.Remove(p);
+                this.Controls.Remove(p);
+                p.Dispose();
+                tbScor.Text = (int.Parse(tbScor.Text) + 1) + "";
             }
         }
+
 
         private void TimerMiscareNaveta_Tick(object? sender, EventArgs e)
         {
@@ -175,14 +235,14 @@ namespace OTI_2024
             Point p = new Point(0, 0);
             if (pornit == 1)
             {
-                InitAll(Image.FromFile(pathbaza + "Inamic.gif"), s, 1, p);
+                InitAll(imgInamic, s, 1, p);
             }
         }
 
         private void TimerMiscare_Tick(object? sender, EventArgs e)
         {
-            foreach(var p in inamici)
-                if(p.Location.X > 45)
+            foreach (var p in inamici)
+                if (p.Location.X > 45)
                     p.Left -= 5;
                 else p.Dispose();
         }
@@ -198,7 +258,7 @@ namespace OTI_2024
             int randX = new Random().Next(1, 10);
             int baza = 22;
             int x = 845;
-            if(pozNava.X != 0 && pozNava.Y != 0)
+            if (pozNava.X != 0 && pozNava.Y != 0)
                 p.Location = new Point(pozNava.X + 23, pozNava.Y + 44);
             else p.Location = new Point(x, poz[randX]);
             this.Controls.Add(p);
@@ -241,9 +301,10 @@ namespace OTI_2024
         {
             if (pornit == 1)
             {
-                if(e.KeyCode == Keys.Space)
+                if (e.KeyCode == Keys.Space)
                 {
                     last = Keys.Space;
+                    PlayOnce(pathbaza + "sunetFire.mp3");
                     pbNava.Image = imgNavaFire;
                     Size s = new Size(10, 10);
                     if (pornit == 1)
@@ -292,7 +353,7 @@ namespace OTI_2024
         private void btnStart_Click(object sender, EventArgs e)
         {
             if (pornit != 1)
-            { 
+            {
                 outputDevice.Play();
                 pornit = 1;
                 btnStart.Image = imgStart;
@@ -305,7 +366,7 @@ namespace OTI_2024
         private void btnPauza_Click(object sender, EventArgs e)
         {
             if (pornit == 1)
-            { 
+            {
                 outputDevice.Pause();
                 btnPauza.Image = imgPauza;
                 btnStop.Image = imgStop;
@@ -344,6 +405,17 @@ namespace OTI_2024
                 outputDevice.Volume = 0.5f;
                 outputDevice.Init(sunete[0]);*/
             }
+        }
+
+        private void pbBack_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void vSlide_Load(object sender, EventArgs e)
+        {
+            //if(outputDevice.Volume + vSlide.Volume > 0f)
+             //   outputDevice.Volume += vSlide.Volume;
         }
     }
 }
