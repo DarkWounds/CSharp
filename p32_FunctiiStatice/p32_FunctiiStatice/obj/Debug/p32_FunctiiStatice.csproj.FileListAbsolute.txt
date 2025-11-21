@@ -1,0 +1,6 @@
+D:\12A\p32_FunctiiStatice\p32_FunctiiStatice\bin\Debug\p32_FunctiiStatice.exe.config
+D:\12A\p32_FunctiiStatice\p32_FunctiiStatice\bin\Debug\p32_FunctiiStatice.exe
+D:\12A\p32_FunctiiStatice\p32_FunctiiStatice\bin\Debug\p32_FunctiiStatice.pdb
+D:\12A\p32_FunctiiStatice\p32_FunctiiStatice\obj\Debug\p32_FunctiiStatice.csprojResolveAssemblyReference.cache
+D:\12A\p32_FunctiiStatice\p32_FunctiiStatice\obj\Debug\p32_FunctiiStatice.exe
+D:\12A\p32_FunctiiStatice\p32_FunctiiStatice\obj\Debug\p32_FunctiiStatice.pdb

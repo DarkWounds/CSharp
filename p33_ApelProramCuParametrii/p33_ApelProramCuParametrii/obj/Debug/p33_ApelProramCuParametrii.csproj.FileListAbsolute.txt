@@ -1,0 +1,5 @@
+D:\12A\p33_ApelProramCuParametrii\p33_ApelProramCuParametrii\bin\Debug\p33_ApelProramCuParametrii.exe.config
+D:\12A\p33_ApelProramCuParametrii\p33_ApelProramCuParametrii\bin\Debug\p33_ApelProramCuParametrii.exe
+D:\12A\p33_ApelProramCuParametrii\p33_ApelProramCuParametrii\bin\Debug\p33_ApelProramCuParametrii.pdb
+D:\12A\p33_ApelProramCuParametrii\p33_ApelProramCuParametrii\obj\Debug\p33_ApelProramCuParametrii.exe
+D:\12A\p33_ApelProramCuParametrii\p33_ApelProramCuParametrii\obj\Debug\p33_ApelProramCuParametrii.pdb

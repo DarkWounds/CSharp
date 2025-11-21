@@ -1,0 +1,6 @@
+D:\12A\p35_Template\p35_Template\bin\Debug\p35_Template.exe.config
+D:\12A\p35_Template\p35_Template\bin\Debug\p35_Template.exe
+D:\12A\p35_Template\p35_Template\bin\Debug\p35_Template.pdb
+D:\12A\p35_Template\p35_Template\obj\Debug\p35_Template.csprojResolveAssemblyReference.cache
+D:\12A\p35_Template\p35_Template\obj\Debug\p35_Template.exe
+D:\12A\p35_Template\p35_Template\obj\Debug\p35_Template.pdb
