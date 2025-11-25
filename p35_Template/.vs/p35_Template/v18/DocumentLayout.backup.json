@@ -7,7 +7,7 @@
       "RelativeMoniker": "D:0:0:{DA400107-8956-4343-8D85-3F87598E506A}|p35_Template\\p35_Template.csproj|solutionrelative:p35_template\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DA400107-8956-4343-8D85-3F87598E506A}|p35_Template\\p35_Template.csproj|d:\\c-start\\p35_template\\p35_template\\stiva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DA400107-8956-4343-8D85-3F87598E506A}|p35_Template\\p35_Template.csproj|D:\\C-Start\\p35_Template\\p35_template\\stiva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DA400107-8956-4343-8D85-3F87598E506A}|p35_Template\\p35_Template.csproj|solutionrelative:p35_template\\stiva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -18,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,19 +34,6 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Stiva.cs",
-              "DocumentMoniker": "D:\\C-Start\\p35_Template\\p35_Template\\Stiva.cs",
-              "RelativeDocumentMoniker": "p35_Template\\Stiva.cs",
-              "ToolTip": "D:\\C-Start\\p35_Template\\p35_Template\\Stiva.cs",
-              "RelativeToolTip": "p35_Template\\Stiva.cs",
-              "ViewState": "AgIAADsAAAAAAAAAAAAuwFEAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T18:46:17.732Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\C-Start\\p35_Template\\p35_Template\\Program.cs",
@@ -57,6 +44,18 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-21T18:46:15.853Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Stiva.cs",
+              "DocumentMoniker": "D:\\C-Start\\p35_Template\\p35_Template\\Stiva.cs",
+              "RelativeDocumentMoniker": "p35_Template\\Stiva.cs",
+              "ToolTip": "D:\\C-Start\\p35_Template\\p35_Template\\Stiva.cs",
+              "RelativeToolTip": "p35_Template\\Stiva.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAuwFEAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-21T18:46:17.732Z"
             },
             {
               "$type": "Bookmark",
