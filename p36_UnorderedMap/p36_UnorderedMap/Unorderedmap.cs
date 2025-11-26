@@ -24,7 +24,7 @@ namespace p36_UnorderedMap
 
     class Unorderedmap
     {
-        private int P = 123457;
+        private int P = 127;
         private List<Element>[] h;
         private int n; // Numarul de elemente distincte din hash
 
@@ -118,18 +118,63 @@ namespace p36_UnorderedMap
             }
         }
 
-        /*
+        public int this[string x]
+        {
+            get
+            {
+                int r = 0;
+                foreach (char ch in x)
+                    r = (256 * r + (int)ch) % P;
+
+                //for (i = 0; i < h[r].Count; i++)
+                //    if (h[r][i].val == x)
+                //        return h[r][i].fr;
+
+                foreach (Element e in h[r])
+                    if (e.val == x) return e.fr;
+
+                return 0;
+            }
+            set
+            {
+                int i, r = 0;
+                foreach (char ch in x)
+                    r = (256 * r + (int)ch) % P;
+                for (i = 0; i < h[r].Count; i++)
+                    if (h[r][i].val == x)
+                    {
+                        h[r][i].fr = value;
+                        if (h[r][i].fr == 0)
+                        {
+                            h[r].RemoveAt(i);
+                            n--;
+                        }
+                        return;
+                    }
+                if (value > 0)
+                {
+                    Element e = new Element(x);
+                    e.fr = value;
+                    h[r].Add(e);
+                    n++;
+                }
+            }
+        }
+
         public override string ToString()
         {
             string s = "";
             for (int i = 0; i < this.P; i++)
             {
-                foreach (Element e in h[i])
-                    s += (e.val + " ");
-                s += "\n";
+                if (h[i].Count > 0)
+                {
+                    foreach (Element e in h[i])
+                        s += (e.val + " ");
+                    s += "\n";
+                }
             }
             return s;
         }
-         * */
+         
     }
 }
