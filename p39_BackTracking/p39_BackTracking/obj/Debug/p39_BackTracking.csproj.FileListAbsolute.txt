@@ -1,0 +1,6 @@
+D:\12A\p39_BackTracking\p39_BackTracking\bin\Debug\p39_BackTracking.exe.config
+D:\12A\p39_BackTracking\p39_BackTracking\bin\Debug\p39_BackTracking.exe
+D:\12A\p39_BackTracking\p39_BackTracking\bin\Debug\p39_BackTracking.pdb
+D:\12A\p39_BackTracking\p39_BackTracking\obj\Debug\p39_BackTracking.csprojResolveAssemblyReference.cache
+D:\12A\p39_BackTracking\p39_BackTracking\obj\Debug\p39_BackTracking.exe
+D:\12A\p39_BackTracking\p39_BackTracking\obj\Debug\p39_BackTracking.pdb
