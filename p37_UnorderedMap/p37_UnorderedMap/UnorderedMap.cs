@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace p36_UnorderedMap
+namespace p37_UnorderedMap
 {
     /// <summary>
     /// Hash table
@@ -102,8 +102,8 @@ namespace p36_UnorderedMap
         //Afiseaza elementele din h[r]
         public void Afis(int r)
         {
-             foreach (Element e in h[r])
-                    Console.Write(e.val + " ");     
+            foreach (Element e in h[r])
+                Console.Write(e.val + " ");
         }
 
         public void Afis()
@@ -111,10 +111,10 @@ namespace p36_UnorderedMap
             for (int i = 0; i < P; i++)
             {
                 if (h[i].Count > 0)
-                {  
+                {
                     Afis(i);
                     Console.WriteLine();
-                } 
+                }
             }
         }
 
@@ -161,6 +161,17 @@ namespace p36_UnorderedMap
             }
         }
 
+        public Element FrecvMax()
+        {
+            Element e = new Element("zzzzzzzzz");
+            for (int i = 0; i < P; i++)
+                if (h[i].Count > 0)
+                    foreach (Element w in h[i])
+                        if ((w.fr > e.fr) || (w.fr == e.fr && w.val.CompareTo(e.val) < 0))
+                            e = w;
+                return e;
+        }
+
         public override string ToString()
         {
             string s = "";
@@ -175,6 +186,5 @@ namespace p36_UnorderedMap
             }
             return s;
         }
-         
     }
 }

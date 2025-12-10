@@ -28,8 +28,28 @@ namespace p36_UnorderedMap
             foreach (string w in s)
                 a.Add(w);
             a.Afis();
+            Console.WriteLine();
 
-            //Console.WriteLine(a);
+            Console.WriteLine(a);
+            string st = @"-------------------------------------";
+            Console.WriteLine(st);
+
+            Unorderedmap M = new Unorderedmap();
+            for (int i = 100; i <= 120; i++)
+                M[i + ""] = i;
+            //M[i.ToString()] = i;
+            M.Afis();
+            M["110"]++;
+            Console.WriteLine("\n" + M["110"]);
+            M["100"] = 0;
+            Console.WriteLine("\n");
+            M.Afis();
+            Console.WriteLine("\n");
+
+            M.Add("Value");
+            M["120"] += 120;
+            M.Afis();
+            Console.WriteLine(M["120"]);
         }
     }
 }
