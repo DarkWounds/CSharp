@@ -1,5 +1,0 @@
-D:\12A\p16_Queue\p16_Queue\bin\Debug\p16_Queue.exe.config
-D:\12A\p16_Queue\p16_Queue\bin\Debug\p16_Queue.exe
-D:\12A\p16_Queue\p16_Queue\bin\Debug\p16_Queue.pdb
-D:\12A\p16_Queue\p16_Queue\obj\Debug\p16_Queue.exe
-D:\12A\p16_Queue\p16_Queue\obj\Debug\p16_Queue.pdb
