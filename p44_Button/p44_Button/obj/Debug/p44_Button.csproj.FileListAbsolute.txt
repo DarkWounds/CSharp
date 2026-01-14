@@ -1,0 +1,9 @@
+D:\12A\p44_Button\p44_Button\bin\Debug\p44_Button.exe.config
+D:\12A\p44_Button\p44_Button\bin\Debug\p44_Button.exe
+D:\12A\p44_Button\p44_Button\bin\Debug\p44_Button.pdb
+D:\12A\p44_Button\p44_Button\obj\Debug\p44_Button.csprojResolveAssemblyReference.cache
+D:\12A\p44_Button\p44_Button\obj\Debug\p44_Button.Form1.resources
+D:\12A\p44_Button\p44_Button\obj\Debug\p44_Button.Properties.Resources.resources
+D:\12A\p44_Button\p44_Button\obj\Debug\p44_Button.csproj.GenerateResource.Cache
+D:\12A\p44_Button\p44_Button\obj\Debug\p44_Button.exe
+D:\12A\p44_Button\p44_Button\obj\Debug\p44_Button.pdb

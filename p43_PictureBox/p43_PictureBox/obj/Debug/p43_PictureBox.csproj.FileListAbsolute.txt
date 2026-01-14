@@ -1,0 +1,9 @@
+D:\12A\p43_PictureBox\p43_PictureBox\bin\Debug\p43_PictureBox.exe.config
+D:\12A\p43_PictureBox\p43_PictureBox\bin\Debug\p43_PictureBox.exe
+D:\12A\p43_PictureBox\p43_PictureBox\bin\Debug\p43_PictureBox.pdb
+D:\12A\p43_PictureBox\p43_PictureBox\obj\Debug\p43_PictureBox.csprojResolveAssemblyReference.cache
+D:\12A\p43_PictureBox\p43_PictureBox\obj\Debug\p43_PictureBox.Form1.resources
+D:\12A\p43_PictureBox\p43_PictureBox\obj\Debug\p43_PictureBox.Properties.Resources.resources
+D:\12A\p43_PictureBox\p43_PictureBox\obj\Debug\p43_PictureBox.csproj.GenerateResource.Cache
+D:\12A\p43_PictureBox\p43_PictureBox\obj\Debug\p43_PictureBox.exe
+D:\12A\p43_PictureBox\p43_PictureBox\obj\Debug\p43_PictureBox.pdb
