@@ -1,0 +1,9 @@
+D:\12A\p40_Form\p40_Form\bin\Debug\p40_Form.exe.config
+D:\12A\p40_Form\p40_Form\bin\Debug\p40_Form.exe
+D:\12A\p40_Form\p40_Form\bin\Debug\p40_Form.pdb
+D:\12A\p40_Form\p40_Form\obj\Debug\p40_Form.csprojResolveAssemblyReference.cache
+D:\12A\p40_Form\p40_Form\obj\Debug\p40_Form.Aplicatie.resources
+D:\12A\p40_Form\p40_Form\obj\Debug\p40_Form.Properties.Resources.resources
+D:\12A\p40_Form\p40_Form\obj\Debug\p40_Form.csproj.GenerateResource.Cache
+D:\12A\p40_Form\p40_Form\obj\Debug\p40_Form.exe
+D:\12A\p40_Form\p40_Form\obj\Debug\p40_Form.pdb

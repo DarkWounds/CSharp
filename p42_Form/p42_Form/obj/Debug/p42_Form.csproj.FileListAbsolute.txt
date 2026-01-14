@@ -1,0 +1,8 @@
+D:\12A\p42_Form\p42_Form\bin\Debug\p42_Form.exe.config
+D:\12A\p42_Form\p42_Form\bin\Debug\p42_Form.exe
+D:\12A\p42_Form\p42_Form\bin\Debug\p42_Form.pdb
+D:\12A\p42_Form\p42_Form\obj\Debug\p42_Form.Start.resources
+D:\12A\p42_Form\p42_Form\obj\Debug\p42_Form.Properties.Resources.resources
+D:\12A\p42_Form\p42_Form\obj\Debug\p42_Form.csproj.GenerateResource.Cache
+D:\12A\p42_Form\p42_Form\obj\Debug\p42_Form.exe
+D:\12A\p42_Form\p42_Form\obj\Debug\p42_Form.pdb
