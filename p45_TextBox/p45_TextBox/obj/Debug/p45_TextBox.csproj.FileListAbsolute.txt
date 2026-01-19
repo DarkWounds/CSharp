@@ -1,0 +1,9 @@
+D:\12A\p45_TextBox\p45_TextBox\bin\Debug\p45_TextBox.exe.config
+D:\12A\p45_TextBox\p45_TextBox\bin\Debug\p45_TextBox.exe
+D:\12A\p45_TextBox\p45_TextBox\bin\Debug\p45_TextBox.pdb
+D:\12A\p45_TextBox\p45_TextBox\obj\Debug\p45_TextBox.Form1.resources
+D:\12A\p45_TextBox\p45_TextBox\obj\Debug\p45_TextBox.Properties.Resources.resources
+D:\12A\p45_TextBox\p45_TextBox\obj\Debug\p45_TextBox.csproj.GenerateResource.Cache
+D:\12A\p45_TextBox\p45_TextBox\obj\Debug\p45_TextBox.exe
+D:\12A\p45_TextBox\p45_TextBox\obj\Debug\p45_TextBox.pdb
+D:\12A\p45_TextBox\p45_TextBox\obj\Debug\p45_TextBox.csprojResolveAssemblyReference.cache
