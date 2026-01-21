@@ -1,0 +1,9 @@
+D:\12A\p46_Media\p46_Media\bin\Debug\p46_Media.exe.config
+D:\12A\p46_Media\p46_Media\bin\Debug\p46_Media.exe
+D:\12A\p46_Media\p46_Media\bin\Debug\p46_Media.pdb
+D:\12A\p46_Media\p46_Media\obj\Debug\p46_Media.csprojResolveAssemblyReference.cache
+D:\12A\p46_Media\p46_Media\obj\Debug\p46_Media.Form1.resources
+D:\12A\p46_Media\p46_Media\obj\Debug\p46_Media.Properties.Resources.resources
+D:\12A\p46_Media\p46_Media\obj\Debug\p46_Media.csproj.GenerateResource.Cache
+D:\12A\p46_Media\p46_Media\obj\Debug\p46_Media.exe
+D:\12A\p46_Media\p46_Media\obj\Debug\p46_Media.pdb
