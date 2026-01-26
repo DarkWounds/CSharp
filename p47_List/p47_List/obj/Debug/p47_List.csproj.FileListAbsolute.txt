@@ -1,0 +1,9 @@
+D:\12A\p47_List\p47_List\bin\Debug\p47_List.exe.config
+D:\12A\p47_List\p47_List\bin\Debug\p47_List.exe
+D:\12A\p47_List\p47_List\bin\Debug\p47_List.pdb
+D:\12A\p47_List\p47_List\obj\Debug\p47_List.csprojResolveAssemblyReference.cache
+D:\12A\p47_List\p47_List\obj\Debug\p47_List.Form1.resources
+D:\12A\p47_List\p47_List\obj\Debug\p47_List.Properties.Resources.resources
+D:\12A\p47_List\p47_List\obj\Debug\p47_List.csproj.GenerateResource.Cache
+D:\12A\p47_List\p47_List\obj\Debug\p47_List.exe
+D:\12A\p47_List\p47_List\obj\Debug\p47_List.pdb
