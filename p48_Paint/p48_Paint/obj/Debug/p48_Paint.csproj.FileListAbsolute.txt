@@ -1,0 +1,9 @@
+D:\12A\p48_Paint\p48_Paint\bin\Debug\p48_Paint.exe.config
+D:\12A\p48_Paint\p48_Paint\bin\Debug\p48_Paint.exe
+D:\12A\p48_Paint\p48_Paint\bin\Debug\p48_Paint.pdb
+D:\12A\p48_Paint\p48_Paint\obj\Debug\p48_Paint.csprojResolveAssemblyReference.cache
+D:\12A\p48_Paint\p48_Paint\obj\Debug\p48_Paint.Form1.resources
+D:\12A\p48_Paint\p48_Paint\obj\Debug\p48_Paint.Properties.Resources.resources
+D:\12A\p48_Paint\p48_Paint\obj\Debug\p48_Paint.csproj.GenerateResource.Cache
+D:\12A\p48_Paint\p48_Paint\obj\Debug\p48_Paint.exe
+D:\12A\p48_Paint\p48_Paint\obj\Debug\p48_Paint.pdb
