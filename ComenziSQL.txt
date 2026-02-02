@@ -1,0 +1,29 @@
+INSERT INTO carti (titlu, autor, anul_aparitiei, id_editura, id_categorie)
+VALUES ('Dusmanii Romei', 'Phillip Matyszack', 2026, 2, 5)
+
+UPDATE carti SET id_editura = 47 WHERE autor = 'Ion Creanga'
+UPDATE carti SET anul_aparitiei = 2030 WHERE autor = 'Dan Brown'
+
+DELETE FROM carti WHERE id_categorie = 2
+DELETE FROM carti WHERE anul_aparitiei <= 2004
+
+SELECT * FROM carti WHERE id_editura < id_categorie
+SELECT * FROM carti WHERE autor LIKE 'A%' (poate fi * sau %)
+SELECT * FROM carti WHERE substr(autor, 1, 1) = 'A' 
+
+SELECT * FROM carti WHERE anul_aparitiei >= 2000 and anul_aparitiei <= 2004 
+ORDER BY anul_aparitiei
+
+SELECT * FROM carti WHERE anul_aparitiei between 2000 and 2004 
+ORDER BY anul_aparitiei
+
+SELECT * FROM carti WHERE length(autor) < 10
+SELECT titlu, autor FROM carti
+SELECT max(anul_aparitiei) FROM carti
+SELECT sum(id_editura) FROM carti
+SELECT sum(id_editura) AS sumTotal FROM carti
+SELECT count(*) AS cnt FROM carti
+SELECT avg(anul_aparitiei) AS average FROM carti
+SELECT count(*) FROM carti WHERE anul_aparitiei = 2005
+SELECT * FROM carti WHERE substr(autor, length(autor), 1) = 'n'
+SELECT * FROM carti WHERE autor LIKE '%an'
