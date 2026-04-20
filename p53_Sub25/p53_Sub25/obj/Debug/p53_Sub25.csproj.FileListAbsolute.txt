@@ -1,0 +1,11 @@
+D:\12A\p53_Sub25\p53_Sub25\bin\Debug\p53_Sub25.exe.config
+D:\12A\p53_Sub25\p53_Sub25\bin\Debug\apartamente.mdf
+D:\12A\p53_Sub25\p53_Sub25\bin\Debug\apartamente_log.ldf
+D:\12A\p53_Sub25\p53_Sub25\bin\Debug\p53_Sub25.exe
+D:\12A\p53_Sub25\p53_Sub25\bin\Debug\p53_Sub25.pdb
+D:\12A\p53_Sub25\p53_Sub25\obj\Debug\p53_Sub25.csprojResolveAssemblyReference.cache
+D:\12A\p53_Sub25\p53_Sub25\obj\Debug\p53_Sub25.Form1.resources
+D:\12A\p53_Sub25\p53_Sub25\obj\Debug\p53_Sub25.Properties.Resources.resources
+D:\12A\p53_Sub25\p53_Sub25\obj\Debug\p53_Sub25.csproj.GenerateResource.Cache
+D:\12A\p53_Sub25\p53_Sub25\obj\Debug\p53_Sub25.exe
+D:\12A\p53_Sub25\p53_Sub25\obj\Debug\p53_Sub25.pdb
