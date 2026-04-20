@@ -1,0 +1,11 @@
+D:\12A\p51_TestGrila\p51_TestGrila\bin\Debug\p51_TestGrila.exe.config
+D:\12A\p51_TestGrila\p51_TestGrila\obj\Debug\p51_TestGrila.csprojResolveAssemblyReference.cache
+D:\12A\p51_TestGrila\p51_TestGrila\obj\Debug\p51_TestGrila.Form1.resources
+D:\12A\p51_TestGrila\p51_TestGrila\obj\Debug\p51_TestGrila.Properties.Resources.resources
+D:\12A\p51_TestGrila\p51_TestGrila\obj\Debug\p51_TestGrila.csproj.GenerateResource.Cache
+D:\12A\p51_TestGrila\p51_TestGrila\bin\Debug\p51_TestGrila.exe
+D:\12A\p51_TestGrila\p51_TestGrila\bin\Debug\p51_TestGrila.pdb
+D:\12A\p51_TestGrila\p51_TestGrila\obj\Debug\p51_TestGrila.exe
+D:\12A\p51_TestGrila\p51_TestGrila\obj\Debug\p51_TestGrila.pdb
+D:\12A\p51_TestGrila\p51_TestGrila\bin\Debug\Intrebari.mdf
+D:\12A\p51_TestGrila\p51_TestGrila\bin\Debug\Intrebari_log.ldf

@@ -1,0 +1,11 @@
+D:\12A\p50_DataBase\p50_DataBase\bin\Debug\p50_DataBase.exe.config
+D:\12A\p50_DataBase\p50_DataBase\bin\Debug\ler.mdf
+D:\12A\p50_DataBase\p50_DataBase\bin\Debug\ler_log.ldf
+D:\12A\p50_DataBase\p50_DataBase\bin\Debug\p50_DataBase.exe
+D:\12A\p50_DataBase\p50_DataBase\bin\Debug\p50_DataBase.pdb
+D:\12A\p50_DataBase\p50_DataBase\obj\Debug\p50_DataBase.csprojResolveAssemblyReference.cache
+D:\12A\p50_DataBase\p50_DataBase\obj\Debug\p50_DataBase.Form1.resources
+D:\12A\p50_DataBase\p50_DataBase\obj\Debug\p50_DataBase.Properties.Resources.resources
+D:\12A\p50_DataBase\p50_DataBase\obj\Debug\p50_DataBase.csproj.GenerateResource.Cache
+D:\12A\p50_DataBase\p50_DataBase\obj\Debug\p50_DataBase.exe
+D:\12A\p50_DataBase\p50_DataBase\obj\Debug\p50_DataBase.pdb
