@@ -1,0 +1,15 @@
+D:\12A\p50_FourInLine\p50_FourInLine\bin\Debug\p50_FourInLine.exe.config
+D:\12A\p50_FourInLine\p50_FourInLine\bin\Debug\p50_FourInLine.exe
+D:\12A\p50_FourInLine\p50_FourInLine\bin\Debug\p50_FourInLine.pdb
+D:\12A\p50_FourInLine\p50_FourInLine\obj\Debug\p50_FourInLine.csprojResolveAssemblyReference.cache
+D:\12A\p50_FourInLine\p50_FourInLine\obj\Debug\p50_FourInLine.Form1.resources
+D:\12A\p50_FourInLine\p50_FourInLine\obj\Debug\p50_FourInLine.Properties.Resources.resources
+D:\12A\p50_FourInLine\p50_FourInLine\obj\Debug\p50_FourInLine.csproj.GenerateResource.Cache
+D:\12A\p50_FourInLine\p50_FourInLine\obj\Debug\p50_FourInLine.exe
+D:\12A\p50_FourInLine\p50_FourInLine\obj\Debug\p50_FourInLine.pdb
+C:\Users\User3\Downloads\p50_FourInLine\p50_FourInLine\bin\Debug\p50_FourInLine.exe.config
+C:\Users\User3\Downloads\p50_FourInLine\p50_FourInLine\obj\Debug\p50_FourInLine.exe
+C:\Users\User3\Downloads\p50_FourInLine\p50_FourInLine\obj\Debug\p50_FourInLine.pdb
+D:\12A\p54_FourInLine\p50_FourInLine\bin\Debug\p50_FourInLine.exe.config
+D:\12A\p54_FourInLine\p50_FourInLine\obj\Debug\p50_FourInLine.exe
+D:\12A\p54_FourInLine\p50_FourInLine\obj\Debug\p50_FourInLine.pdb
