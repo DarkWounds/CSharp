@@ -1,0 +1,11 @@
+D:\12A\p55_SubiectAtestat21\p55_SubiectAtestat21\bin\Debug\p55_SubiectAtestat21.exe.config
+D:\12A\p55_SubiectAtestat21\p55_SubiectAtestat21\bin\Debug\parlament.mdf
+D:\12A\p55_SubiectAtestat21\p55_SubiectAtestat21\bin\Debug\parlament_log.ldf
+D:\12A\p55_SubiectAtestat21\p55_SubiectAtestat21\bin\Debug\p55_SubiectAtestat21.exe
+D:\12A\p55_SubiectAtestat21\p55_SubiectAtestat21\bin\Debug\p55_SubiectAtestat21.pdb
+D:\12A\p55_SubiectAtestat21\p55_SubiectAtestat21\obj\Debug\p55_SubiectAtestat21.csprojResolveAssemblyReference.cache
+D:\12A\p55_SubiectAtestat21\p55_SubiectAtestat21\obj\Debug\p55_SubiectAtestat21.Form1.resources
+D:\12A\p55_SubiectAtestat21\p55_SubiectAtestat21\obj\Debug\p55_SubiectAtestat21.Properties.Resources.resources
+D:\12A\p55_SubiectAtestat21\p55_SubiectAtestat21\obj\Debug\p55_SubiectAtestat21.csproj.GenerateResource.Cache
+D:\12A\p55_SubiectAtestat21\p55_SubiectAtestat21\obj\Debug\p55_SubiectAtestat21.exe
+D:\12A\p55_SubiectAtestat21\p55_SubiectAtestat21\obj\Debug\p55_SubiectAtestat21.pdb
