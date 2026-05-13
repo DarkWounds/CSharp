@@ -1,0 +1,11 @@
+D:\12A\p56_Subiect31\p56_Subiect31\bin\Debug\p56_Subiect31.exe.config
+D:\12A\p56_Subiect31\p56_Subiect31\obj\Debug\p56_Subiect31.csprojResolveAssemblyReference.cache
+D:\12A\p56_Subiect31\p56_Subiect31\obj\Debug\p56_Subiect31.Form1.resources
+D:\12A\p56_Subiect31\p56_Subiect31\obj\Debug\p56_Subiect31.Properties.Resources.resources
+D:\12A\p56_Subiect31\p56_Subiect31\obj\Debug\p56_Subiect31.csproj.GenerateResource.Cache
+D:\12A\p56_Subiect31\p56_Subiect31\bin\Debug\Romania.mdf
+D:\12A\p56_Subiect31\p56_Subiect31\bin\Debug\Romania_log.ldf
+D:\12A\p56_Subiect31\p56_Subiect31\bin\Debug\p56_Subiect31.exe
+D:\12A\p56_Subiect31\p56_Subiect31\bin\Debug\p56_Subiect31.pdb
+D:\12A\p56_Subiect31\p56_Subiect31\obj\Debug\p56_Subiect31.exe
+D:\12A\p56_Subiect31\p56_Subiect31\obj\Debug\p56_Subiect31.pdb
