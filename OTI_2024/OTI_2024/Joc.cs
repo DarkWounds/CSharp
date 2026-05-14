@@ -65,7 +65,7 @@ namespace OTI_2024
 
         private void InitTimere(int i)
         {
-            timerAsteroizi.Interval = 1000;
+            timerAsteroizi.Interval = 1300;
             timerMiscareNaveta.Interval = 16;
             timerInamici.Interval = 2000;
             tMiscareInamici.Interval = 30;
@@ -382,8 +382,8 @@ namespace OTI_2024
         {
             if (pornit == 1)
             {
-                //MessageBox.Show();
-                /*
+                MessageBox.Show("Game Over");
+                
                 btnStop.Image = imgStop;
                 btnStart.Image = Image.FromFile(pathbaza + "Start.png");
                 InitTimere(0);
@@ -403,7 +403,7 @@ namespace OTI_2024
                 outputDevice.Dispose();
                 outputDevice = new WaveOutEvent();
                 outputDevice.Volume = 0.5f;
-                outputDevice.Init(sunete[0]);*/
+                outputDevice.Init(sunete[0]);
             }
         }
 
