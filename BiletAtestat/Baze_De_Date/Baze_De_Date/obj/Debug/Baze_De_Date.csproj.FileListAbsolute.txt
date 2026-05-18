@@ -1,0 +1,11 @@
+D:\12A\BiletAtestat\Baze_De_Date\Baze_De_Date\bin\Debug\Baze_De_Date.exe.config
+D:\12A\BiletAtestat\Baze_De_Date\Baze_De_Date\bin\Debug\cinematograf.mdf
+D:\12A\BiletAtestat\Baze_De_Date\Baze_De_Date\bin\Debug\cinematograf_log.ldf
+D:\12A\BiletAtestat\Baze_De_Date\Baze_De_Date\bin\Debug\Baze_De_Date.exe
+D:\12A\BiletAtestat\Baze_De_Date\Baze_De_Date\bin\Debug\Baze_De_Date.pdb
+D:\12A\BiletAtestat\Baze_De_Date\Baze_De_Date\obj\Debug\Baze_De_Date.csprojResolveAssemblyReference.cache
+D:\12A\BiletAtestat\Baze_De_Date\Baze_De_Date\obj\Debug\Baze_De_Date.Form1.resources
+D:\12A\BiletAtestat\Baze_De_Date\Baze_De_Date\obj\Debug\Baze_De_Date.Properties.Resources.resources
+D:\12A\BiletAtestat\Baze_De_Date\Baze_De_Date\obj\Debug\Baze_De_Date.csproj.GenerateResource.Cache
+D:\12A\BiletAtestat\Baze_De_Date\Baze_De_Date\obj\Debug\Baze_De_Date.exe
+D:\12A\BiletAtestat\Baze_De_Date\Baze_De_Date\obj\Debug\Baze_De_Date.pdb
